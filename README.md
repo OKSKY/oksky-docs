@@ -12,7 +12,7 @@
 https://{YOUR_OKSKY_DOMAIN}/rapi/v1/
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
  YOUR\_OKSKY\_DOMAINは、テナント毎に発行されます。
 {% endhint %}
 
