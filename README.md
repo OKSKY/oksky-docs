@@ -6,6 +6,8 @@ description: こちらの機能全てがベータリリースとして提供さ�
 
 ## Resources API
 
+### Overview
+
 メッセージオブジェクトや、ユーザーオブジェクトなどのDB上に格納されている情報へのアクセスができるAPIです。
 
 #### Dreaming in URL’s
@@ -38,7 +40,7 @@ GET Request Sample
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="X-Access-Token" type="string" required=false %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
 your access token set here.
 {% endapi-method-parameter %}
 
@@ -72,5 +74,99 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="post" host="https://{YOUR\_OKSKY\_DOMAIN}" path="/rapi/v1/rooms" %}
+{% api-method-summary %}
+Create Request Sample
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="https://{YOUR\_OKSKY\_DOMAIN}" path="/rapi/v1/rooms/1" %}
+{% api-method-summary %}
+Edit Request Sample
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="delete" host="https://{YOUR\_OKSKY\_DOMAIN}" path="/rapi/v1/rooms/1" %}
+{% api-method-summary %}
 Delete Request Sample
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
