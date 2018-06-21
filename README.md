@@ -1,7 +1,3 @@
----
-description: こちらの機能全てがベータリリースとして提供されています。今後変更が加えられることがございます。ご注意ください。
----
-
 # OK SKY API Reference
 
 ## Resources API

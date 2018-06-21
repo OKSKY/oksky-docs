@@ -1,26 +1,24 @@
-## Resources API
+# Resources API
 
-### Overview
+## Overview
 
 メッセージオブジェクトや、ユーザーオブジェクトなどのDB上に格納されている情報へのアクセスができるAPIです。
 
-#### Dreaming in URL’s
+### Dreaming in URL’s
 
-```
+```text
 https://{YOUR_OKSKY_DOMAIN}/rapi/v1/
 ```
 
 {% hint style="info" %}
- YOUR\_OKSKY\_DOMAINは、テナント毎に発行されます。
+YOUR\_OKSKY\_DOMAINは、テナント毎に発行されます。
 {% endhint %}
 
 Sample URLs
 
-```
+```text
 https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/{resource_name}https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/{resource_name}/{resource_id}https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/{resource_name}/relationships/{resource_name}https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/{resource_name}/relationships/{child_resource_name}/{child_resource_id}https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/roomshttps://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/rooms/1/https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/rooms/1/relationships/messageshttps://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/messageshttps://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/messages/1
 ```
-
-
 
 {% api-method method="get" host="https://{YOUR\_OKSKY\_DOMAIN}" path="/rapi/v1/rooms" %}
 {% api-method-summary %}
@@ -60,7 +58,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -92,7 +90,7 @@ Create Request Sample
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -124,7 +122,7 @@ Edit Request Sample
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -156,10 +154,11 @@ Delete Request Sample
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

@@ -1,5 +1,5 @@
 # Table of contents
 
 * [OK SKY API Reference](README.md)
-* [Resources object](untitled.md)
+* [Resources API](resources-api.md)
 
