@@ -12,7 +12,7 @@
 | --- | --- |
 |  |  |
 
-{% api-method method="get" host="" path="" %}
+{% api-method method="get" host="" path="/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 find user 
 {% endapi-method-summary %}
@@ -52,7 +52,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="" %}
+{% api-method method="get" host="" path="/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 search users
 {% endapi-method-summary %}

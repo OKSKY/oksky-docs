@@ -1,12 +1,12 @@
 # UserEvent object
 
-### Fields
+## Fields
 
 | Field | Type | Description | Editable |
 | --- | --- |
 |  |  |  |  |
 
-### Filters
+## Filters
 
 | Field | Description |
 | --- | --- |
@@ -14,7 +14,7 @@
 
 {% api-method method="get" host="" path="" %}
 {% api-method-summary %}
-find user 
+find user
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -44,7 +44,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -84,7 +84,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
