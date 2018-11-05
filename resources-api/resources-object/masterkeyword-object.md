@@ -3,13 +3,13 @@
 ## Fields
 
 | Field | Type | Description | Editable |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 |  |  |  |  |
 
 ## Filters
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 |  |  |
 
 {% api-method method="get" host="" path="" %}
