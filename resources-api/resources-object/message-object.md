@@ -30,9 +30,9 @@
 | start_date |  |
 | end_date |  |
 
-{% api-method method="get" host="" path="/rapi/v1/messages/{id}" %}
+{% api-method method="get" host="" path="/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
-find user
+find message
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -84,7 +84,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/messages" %}
 {% api-method-summary %}
-search users
+search messages
 {% endapi-method-summary %}
 
 {% api-method-description %}
