@@ -4,17 +4,17 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| name |  |  |  |
-| description |  |  |  |
-| is\_private |  |  |  |
-| settings |  |  |  |
-| kind |  |  |  |
-| enabled |  |  |  |
-| room\_code |  |  |  |
-| awaiting\_support |  |  |  |
-| created\_at\_unix |  |  |  |
-| created\_at |  |  |  |
-| is\_external |  |  |  |
+| name | string |  |  |
+| description | string |  |  |
+| is\_private | boolean |  |  |
+| settings | object |  |  |
+| kind | string |  |  |
+| enabled | boolean |  |  |
+| room\_code | string |  |  |
+| awaiting\_support | boolean |  |  |
+| created\_at\_unix | integer |  |  |
+| created\_at | datetime |  |  |
+| is\_external | boolean |  |  |
 
 ### Filters
 
@@ -25,6 +25,18 @@
 | is\_private |  |
 | kind |  |
 | awaiting\_support |  |
+| replied |  |
+| starred |  |
+| private_rooms |  |
+| private_rooms_with_active_support |  |
+| private_rooms_with_active_or_awaiting_support |  |
+| current_user_is_member |  |
+| support_rooms_with_active_support |  |
+| support_rooms_with_active_or_awaiting_support |  |
+| current_users_support_rooms_with_active_or_awaiting_support |  |
+| name_like |  |
+| support_room_name_like |  |
+| sort_unread_read_for_user_id |  |
 
 {% api-method method="get" host="" path="/rapi/v1/rooms" %}
 {% api-method-summary %}
