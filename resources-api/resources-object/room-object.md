@@ -38,7 +38,7 @@
 | support_room_name_like |  |
 | sort_unread_read_for_user_id |  |
 
-{% api-method method="get" host="" path="/rapi/v1/rooms" %}
+{% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 find room 
 {% endapi-method-summary %}
@@ -71,7 +71,10 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
 
+{"data": {"id": "1", "type": "rooms", "links": {...}, "attributes": {...}, "relationships": {...}}}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -111,14 +114,28 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "rooms",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ],
+  "meta": {
+    "record_count": 1
+  },
+  "links": {...}
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="" %}
+{% api-method method="post" host="" path="/rapi/v1/rooms" %}
 {% api-method-summary %}
 create room
 {% endapi-method-summary %}
@@ -164,9 +181,9 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="" %}
+{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
-edit rooms
+update rooms
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -196,7 +213,7 @@ edit rooms
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="" %}
+{% api-method method="delete" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 delete room
 {% endapi-method-summary %}
