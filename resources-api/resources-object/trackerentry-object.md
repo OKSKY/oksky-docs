@@ -22,7 +22,7 @@
 
 {% api-method method="get" host="" path="/rapi/v1/tracker_entries/{:id}" %}
 {% api-method-summary %}
-find tracker_entry
+find tracker entry
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -65,7 +65,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/tracker_entries" %}
 {% api-method-summary %}
-search tracker_entries
+search tracker entries
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -119,7 +119,7 @@ application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/tracker_entries/latest_for_user_uuid" %}
 {% api-method-summary %}
-latest_for_user_uuid tracker_entries
+latest for user uuid
 {% endapi-method-summary %}
 
 {% api-method-description %}
