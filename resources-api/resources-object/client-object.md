@@ -248,7 +248,7 @@ application/vnd.api+json
 
 {% api-method method="post" host="" path="/rapi/v1/clients/{:id}/login" %}
 {% api-method-summary %}
-login client
+login
 {% endapi-method-summary %}
 
 {% api-method-description %}
