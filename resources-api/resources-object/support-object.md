@@ -4,8 +4,8 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| end_time_unix |  |  |  |
-| start_time_unix |  |  |  |
+| end_time_unix | integer |  |  |
+| start_time_unix | integer |  |  |
 
 ## Filters
 
