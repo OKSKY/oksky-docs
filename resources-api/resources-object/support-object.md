@@ -175,11 +175,25 @@ update supports
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -207,11 +221,19 @@ delete support
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -230,7 +252,7 @@ delete support
 
 {% api-method method="get" host="" path="/rapi/v1/supports/search" %}
 {% api-method-summary %}
-search supports
+search
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -271,7 +293,7 @@ application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/supports/export" %}
 {% api-method-summary %}
-export supports
+export
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -311,7 +333,7 @@ application/vnd.api+json
 
 {% api-method method="put" host="" path="/rapi/v1/supports/end_support" %}
 {% api-method-summary %}
-end_support supports
+end support
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -320,11 +342,19 @@ end_support supports
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -343,7 +373,7 @@ end_support supports
 
 {% api-method method="put" host="" path="/rapi/v1/supports/reassign" %}
 {% api-method-summary %}
-reassign supports
+reassign
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -352,11 +382,19 @@ reassign supports
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -375,7 +413,7 @@ reassign supports
 
 {% api-method method="put" host="" path="/rapi/v1/supports/reopen" %}
 {% api-method-summary %}
-reopen supports
+reopen
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -384,11 +422,19 @@ reopen supports
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
