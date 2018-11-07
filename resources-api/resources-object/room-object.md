@@ -159,6 +159,12 @@ application/vnd.api+json
 application/vnd.api+json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -207,6 +213,12 @@ application/vnd.api+json
 application/vnd.api+json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -303,7 +315,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
 {% api-method-summary %}
 approve support draft messages
 {% endapi-method-summary %}
@@ -343,7 +355,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
 {% api-method-summary %}
 reject support draft messages
 {% endapi-method-summary %}
