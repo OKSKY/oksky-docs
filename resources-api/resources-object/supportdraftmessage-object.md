@@ -31,7 +31,7 @@
 
 {% api-method method="get" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
-find support_draft_message
+find support draft message
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -74,7 +74,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/support_draft_messages" %}
 {% api-method-summary %}
-search support_draft_messages
+search support draft messages
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -128,7 +128,7 @@ application/vnd.api+json
 
 {% api-method method="post" host="" path="/rapi/v1/support_draft_messages" %}
 {% api-method-summary %}
-create support_draft_message
+create support draft message
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -174,7 +174,7 @@ set your access token
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
-update support_draft_messages
+update support draft messages
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -183,11 +183,25 @@ update support_draft_messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -206,7 +220,7 @@ update support_draft_messages
 
 {% api-method method="delete" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
-delete support_draft_message
+delete support draft message
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -215,11 +229,19 @@ delete support_draft_message
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -238,7 +260,7 @@ delete support_draft_message
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/mark_read_all_resolved" %}
 {% api-method-summary %}
-mark_read_all_resolved support_draft_messages
+mark read all resolved
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -247,11 +269,19 @@ mark_read_all_resolved support_draft_messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -270,7 +300,7 @@ mark_read_all_resolved support_draft_messages
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/approve" %}
 {% api-method-summary %}
-approve support_draft_messages
+approve 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -279,11 +309,19 @@ approve support_draft_messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -302,7 +340,7 @@ approve support_draft_messages
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/reject" %}
 {% api-method-summary %}
-reject support_draft_messages
+reject
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -311,11 +349,19 @@ reject support_draft_messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -334,7 +380,7 @@ reject support_draft_messages
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/mark_read" %}
 {% api-method-summary %}
-mark_read support_draft_messages
+mark read
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -343,11 +389,19 @@ mark_read support_draft_messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
