@@ -16,7 +16,7 @@
 
 {% api-method method="get" host="" path="/rapi/v1/user_events/{:id}" %}
 {% api-method-summary %}
-find user_event
+find user event
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -59,7 +59,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/user_events" %}
 {% api-method-summary %}
-search user_events
+search user events
 {% endapi-method-summary %}
 
 {% api-method-description %}
