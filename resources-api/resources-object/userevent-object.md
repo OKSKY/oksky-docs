@@ -4,17 +4,19 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-|  |  |  |  |
+| resource_type | string |  |  |
+| kind | string |  |  |
+| resource_id | integer |  |  |
+| created_at_unix | integer |  |  |
 
 ## Filters
 
 | Field | Description |
 | :--- | :--- |
-|  |  |
 
-{% api-method method="get" host="" path="" %}
+{% api-method method="get" host="" path="/rapi/v1/user_events/{:id}" %}
 {% api-method-summary %}
-find user
+find user_event
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -45,16 +47,19 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```text
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
 
+{"data": {"id": "1", "type": "user_events", "links": {...}, "attributes": {...}, "relationships": {...}}}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="" %}
+{% api-method method="get" host="" path="/rapi/v1/user_events" %}
 {% api-method-summary %}
-search users
+search user_events
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -85,10 +90,23 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "user_events",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ],
+  "meta": {
+    "record_count": 1
+  },
+  "links": {...}
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
