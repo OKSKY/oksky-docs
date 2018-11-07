@@ -148,18 +148,19 @@ create message
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Accept" type="string" required=false %}
-application/vnd.api+json
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 application/vnd.api+json
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="X-Access-Token" type="string" required=true %}
-set your access token
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="data" type="object" required=true %}
@@ -193,11 +194,19 @@ update messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -225,11 +234,19 @@ delete message
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -257,11 +274,19 @@ search
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -289,11 +314,19 @@ export
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
