@@ -170,11 +170,25 @@ update members
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -202,11 +216,19 @@ delete member
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
