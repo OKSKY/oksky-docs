@@ -15,7 +15,7 @@
 
 {% api-method method="get" host="" path="/rapi/v1/master_keywords/{:id}" %}
 {% api-method-summary %}
-find master_keyword
+find master keyword
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -66,7 +66,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/master_keywords" %}
 {% api-method-summary %}
-search master_keywords
+search master keywords
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -120,7 +120,7 @@ application/vnd.api+json
 
 {% api-method method="post" host="" path="/rapi/v1/master_keywords" %}
 {% api-method-summary %}
-create master_keyword
+create master keyword
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -175,11 +175,25 @@ update message_keywords
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-headers %}
+{% api-method-parameter name="Accept" type="string" required=false %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set your access token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="data" type="object" required=true %}
 
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -198,7 +212,7 @@ update message_keywords
 
 {% api-method method="delete" host="" path="/rapi/v1/master_keywords/{:id}" %}
 {% api-method-summary %}
-delete master_keyword
+delete master keyword
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -207,11 +221,19 @@ delete master_keyword
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="Accept" type="string" required=false %}
+application/vnd.api+json
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set your access token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
