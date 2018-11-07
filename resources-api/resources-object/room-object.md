@@ -147,24 +147,18 @@ create room
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Accept" type="string" required=false %}
-application/vnd.api+json
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 application/vnd.api+json
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="X-Access-Token" type="string" required=true %}
-set your access token
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -174,7 +168,15 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "rooms",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -192,11 +194,19 @@ update rooms
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -224,11 +234,19 @@ delete room
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -256,11 +274,19 @@ history
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -288,11 +314,19 @@ approve support draft messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -320,11 +354,19 @@ reject support draft messages
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -352,11 +394,19 @@ create or find group room
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -384,11 +434,19 @@ create or find direct room
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -416,11 +474,19 @@ room counts
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="X-Access-Token" type="string" required=true %}
+set you access token
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+application/vnd.api+json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -432,7 +498,7 @@ room counts
 ```
 
 ```
-{% endapi-method-response-example %}
+{% endapi-method-response-example %}`
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
