@@ -40,7 +40,8 @@
 
 {% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
-find room 
+find room
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -74,7 +75,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "rooms", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "rooms",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -228,7 +237,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "rooms",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -268,7 +285,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -308,7 +325,10 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url,tags_all
+1,a,onyx-corny-spoon-1-eEcWoIfzYnU,17,2018/11/08 11:46,2018/11/08 11:46,12,1811071416537033,text,"",""
+2,b,onyx-corny-spoon-1-eEcWoIfzYnU,17,2018/11/08 11:46,2018/11/08 11:46,12,1811071416537033,text,"",""
+3,c,onyx-corny-spoon-1-eEcWoIfzYnU,17,2018/11/08 11:46,2018/11/08 11:46,12,1811071416537033,text,"",""
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
