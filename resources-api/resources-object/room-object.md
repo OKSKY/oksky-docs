@@ -38,13 +38,13 @@
 | support_room_name_like |  |
 | sort_unread_read_for_user_id |  |
 
+[![Run in find room](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
 {% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 find room
 {% endapi-method-summary %}
 
 {% api-method-description %}
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
 {% endapi-method-description %}
 
 {% api-method-spec %}
