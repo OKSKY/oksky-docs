@@ -228,7 +228,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -348,7 +356,8 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url,tags_all
+1,a,kiwi-barren-cabbage-1-wbbRxtFEf9E,3,2018/11/08 17:53,2018/11/08 17:53,2,1811081753033735,text,"",""
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
