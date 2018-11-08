@@ -40,8 +40,7 @@
 
 {% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
-find room
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
+[![Run in find room](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
 {% endapi-method-summary %}
 
 {% api-method-description %}
