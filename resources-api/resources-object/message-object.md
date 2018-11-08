@@ -30,6 +30,8 @@
 | start_date |  |
 | end_date |  |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23ad71d472b2b38669f3)
+
 {% api-method method="get" host="" path="/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 find message
