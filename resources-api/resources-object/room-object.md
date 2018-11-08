@@ -38,7 +38,8 @@
 | support_room_name_like |  |
 | sort_unread_read_for_user_id |  |
 
-[![Run in find room](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5c071e404b1127109453)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e59c43089a9d822572e4)
+
 {% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 find room
@@ -527,7 +528,13 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "type": "room_counts",
+    "id": "1",
+    "attributes": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}`
 {% endapi-method-response %}
