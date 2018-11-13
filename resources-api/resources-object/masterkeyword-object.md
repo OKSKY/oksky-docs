@@ -13,6 +13,8 @@
 | Field | Description |
 | :--- | :--- |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a7d848e84131d1179d8e)
+
 {% api-method method="get" host="" path="/rapi/v1/master_keywords/{:id}" %}
 {% api-method-summary %}
 find master keyword
@@ -157,16 +159,28 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "master_keywords",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {
+      "user_infos": {
+        "links": {...}
+      }
+    }
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/message_keywords/{:id}" %}
+{% api-method method="put" host="" path="/rapi/v1/master_keywords/{:id}" %}
 {% api-method-summary %}
-update message_keywords
+update master keywords
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -203,7 +217,19 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "master_keywords",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {
+      "user_infos": {
+        "links": {...}
+      }
+    }
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -243,7 +269,7 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
