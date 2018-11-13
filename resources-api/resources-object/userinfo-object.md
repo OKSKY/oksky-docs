@@ -11,9 +11,11 @@
 | Field | Description |
 | :--- | :--- |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d5764fee0f296fb30cad)
+
 {% api-method method="get" host="" path="/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
-find user_info
+find user info
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -64,7 +66,7 @@ Content-Type: application/vnd.api+json
 
 {% api-method method="get" host="" path="/rapi/v1/user_infos" %}
 {% api-method-summary %}
-search user_infos
+search user infos
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -119,7 +121,7 @@ application/vnd.api+json
 
 {% api-method method="post" host="" path="/rapi/v1/user_infos" %}
 {% api-method-summary %}
-create user_info
+create user info
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -165,7 +167,7 @@ set your access token
 
 {% api-method method="put" host="" path="/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
-update user_infos
+update user infos
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -202,7 +204,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "user_infos",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -211,7 +221,7 @@ application/vnd.api+json
 
 {% api-method method="delete" host="" path="/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
-delete user_info
+delete user info
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -242,7 +252,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
