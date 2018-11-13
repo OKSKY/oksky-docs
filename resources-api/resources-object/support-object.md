@@ -304,10 +304,7 @@ application/vnd.api+json
   "meta": {
     "record_count": 1
   },
-  "links": {
-    "first": "http://localhost:5000/rapi/v1/supports?page%5Bnumber%5D=1\u0026page%5Bsize%5D=25",
-    "last": "http://localhost:5000/rapi/v1/supports?page%5Bnumber%5D=1\u0026page%5Bsize%5D=25"
-  }
+  "links": {...}
 }
 ```
 {% endapi-method-response-example %}
