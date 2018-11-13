@@ -12,6 +12,8 @@
 | :--- | :--- |
 | room_id |  |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/981e77b11762be50c5d9)
+
 {% api-method method="get" host="" path="/rapi/v1/suggestions/{:id}" %}
 {% api-method-summary %}
 find suggestion
@@ -48,7 +50,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "suggestions", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "suggestions",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -194,7 +204,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "suggestions",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -234,7 +252,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
