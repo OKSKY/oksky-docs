@@ -15,6 +15,8 @@
 | Field | Description |
 | :--- | :--- |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6cc5fa81ae1644800b7d)
+
 {% api-method method="get" host="" path="/rapi/v1/memos/{:id}" %}
 {% api-method-summary %}
 find memo
@@ -51,7 +53,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "memos", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "memos",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -151,7 +161,15 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "memos",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -197,7 +215,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "memos",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -237,7 +263,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
