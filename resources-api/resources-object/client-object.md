@@ -17,6 +17,8 @@
 | Field | Description |
 | :--- | :--- |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/efca1700c2eb1ff3f4a6)
+
 {% api-method method="get" host="" path="/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 find client
@@ -53,7 +55,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "clients", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "clients",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -153,7 +163,15 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "clients",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -199,7 +217,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "clients",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -239,7 +265,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -279,7 +305,23 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "config": {
+      "roomUrl": "http://localhost:5000/rooms/4",
+      "loggedInUserUuid": "22daff3b-5878-49d3-a0c5-1be3a0f3d01d",
+      "shouldShow": true,
+      "customCss": "",
+      "visitId": "cdeecc09-664c-4b1b-9782-b43cdb2dc4b0",
+      "appSubdomain": "fukushi-local-co",
+      "treasureDataConfig": null,
+      "csrfToken": "2PCXze3XgqVe7JIvE8cpxTAamgFMvpU4oAP3Vc3vUx5X2ttysHkRv6EXDuOMuAGvmccJ2L9jx1TV4CEUozXDJw=="
+    }
+  },
+  "options": {
+    "access_token": "90cb55f20d164aecab75fdb858a35f50"
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
