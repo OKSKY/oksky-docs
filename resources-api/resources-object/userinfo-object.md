@@ -158,7 +158,15 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "user_infos",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
