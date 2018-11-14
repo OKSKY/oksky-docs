@@ -29,6 +29,8 @@
 | from_created_at |  |
 | to_created_at |  |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/39359c5335f2548543e9)
+
 {% api-method method="get" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
 find support draft message
@@ -65,7 +67,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "support_draft_messages", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "support_draft_messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -211,7 +221,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "support_draft_messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -251,7 +269,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -291,7 +309,17 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "support_draft_messages",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -300,7 +328,7 @@ application/vnd.api+json
 
 {% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/approve" %}
 {% api-method-summary %}
-approve 
+approve
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -331,7 +359,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "support_draft_messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -371,7 +407,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "support_draft_messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -411,7 +455,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "support_draft_messages",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
