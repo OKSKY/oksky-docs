@@ -28,6 +28,8 @@
 | :--- | :--- |
 | uuid |  |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9012e3b8a606555cc81d)
+
 {% api-method method="get" host="" path="/rapi/v1/users" %}
 {% api-method-summary %}
 find user
@@ -64,7 +66,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "users", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "administrators",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -108,7 +118,7 @@ application/vnd.api+json
   "data": [
     {
       "id": "1",
-      "type": "users",
+      "type": "administrators",
       "links": {...},
       "attributes": {...},
       "relationships": {...}
@@ -164,7 +174,15 @@ set your access token
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "users",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -210,7 +228,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "administrators",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -250,7 +276,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -290,7 +316,21 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "users",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ],
+  "meta": {
+    "record_count": 1
+  },
+  "links": {...}
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -330,7 +370,21 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "users",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ],
+  "meta": {
+    "record_count": 1
+  },
+  "links": {...}
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -370,7 +424,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
