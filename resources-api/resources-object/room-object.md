@@ -368,7 +368,17 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "support_draft_messages",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -408,7 +418,17 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "support_draft_messages",
+      "links": {...},
+      "attributes": {...},
+      "relationships": {...}
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -448,7 +468,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "rooms",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -488,7 +516,15 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+  "data": {
+    "id": "1",
+    "type": "rooms",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
