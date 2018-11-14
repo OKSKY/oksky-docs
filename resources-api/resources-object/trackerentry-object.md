@@ -20,6 +20,8 @@
 | :--- | :--- |
 | user_uuid |  |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/123e52529e9ffdabe8cb)
+
 {% api-method method="get" host="" path="/rapi/v1/tracker_entries/{:id}" %}
 {% api-method-summary %}
 find tracker entry
@@ -53,18 +55,7 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```text
-HTTP/1.1 200 OK
-Content-Type: application/vnd.api+json
 
-{
-  "data": {
-    "id": "1",
-    "type": "tracker_entries",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
-  }
-}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -158,7 +149,14 @@ application/vnd.api+json
 {% endapi-method-response-example-description %}
 
 ```text
-
+{
+  "data": {
+    "id": "1",
+    "type": "tracker_entries",
+    "links": {...},
+    "attributes": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
