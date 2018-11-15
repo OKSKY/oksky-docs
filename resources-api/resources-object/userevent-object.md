@@ -14,6 +14,8 @@
 | Field | Description |
 | :--- | :--- |
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/20b7f3930eb31c9ebf89)
+
 {% api-method method="get" host="" path="/rapi/v1/user_events/{:id}" %}
 {% api-method-summary %}
 find user event
@@ -50,7 +52,15 @@ application/vnd.api+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
-{"data": {"id": "1", "type": "user_events", "links": {...}, "attributes": {...}, "relationships": {...}}}
+{
+  "data": {
+    "id": "1",
+    "type": "user_events",
+    "links": {...},
+    "attributes": {...},
+    "relationships": {...}
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
