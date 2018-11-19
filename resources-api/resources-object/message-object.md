@@ -32,7 +32,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23ad71d472b2b38669f3)
 
-{% api-method method="get" host="" path="/rapi/v1/messages/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 find message
 {% endapi-method-summary %}
@@ -84,7 +84,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/messages" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages" %}
 {% api-method-summary %}
 search messages
 {% endapi-method-summary %}
@@ -138,7 +138,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/messages" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages" %}
 {% api-method-summary %}
 create message
 {% endapi-method-summary %}
@@ -199,7 +199,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/messages/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 update messages
 {% endapi-method-summary %}
@@ -253,7 +253,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/messages/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 delete message
 {% endapi-method-summary %}
@@ -293,7 +293,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/messages/search" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/search" %}
 {% api-method-summary %}
 search
 {% endapi-method-summary %}
@@ -333,7 +333,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/messages/export" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/export" %}
 {% api-method-summary %}
 export
 {% endapi-method-summary %}
