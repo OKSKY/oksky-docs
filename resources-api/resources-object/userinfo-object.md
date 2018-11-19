@@ -13,7 +13,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d5764fee0f296fb30cad)
 
-{% api-method method="get" host="" path="/rapi/v1/user_infos/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
 find user info
 {% endapi-method-summary %}
@@ -64,7 +64,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/user_infos" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos" %}
 {% api-method-summary %}
 search user infos
 {% endapi-method-summary %}
@@ -119,7 +119,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/user_infos" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos" %}
 {% api-method-summary %}
 create user info
 {% endapi-method-summary %}
@@ -173,7 +173,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/user_infos/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
 update user infos
 {% endapi-method-summary %}
@@ -227,7 +227,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/user_infos/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/{:id}" %}
 {% api-method-summary %}
 delete user info
 {% endapi-method-summary %}
