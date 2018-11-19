@@ -30,7 +30,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9012e3b8a606555cc81d)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 find user
 {% endapi-method-summary %}
