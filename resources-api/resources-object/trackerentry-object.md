@@ -22,7 +22,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/123e52529e9ffdabe8cb)
 
-{% api-method method="get" host="" path="/rapi/v1/tracker_entries/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/tracker_entries/{:id}" %}
 {% api-method-summary %}
 find tracker entry
 {% endapi-method-summary %}
@@ -62,7 +62,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/tracker_entries" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/tracker_entries" %}
 {% api-method-summary %}
 search tracker entries
 {% endapi-method-summary %}
@@ -116,7 +116,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/tracker_entries/latest_for_user_uuid" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/tracker_entries/latest_for_user_uuid" %}
 {% api-method-summary %}
 latest for user uuid
 {% endapi-method-summary %}
