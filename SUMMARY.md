@@ -17,7 +17,6 @@
     * [UserEvent object](resources-api/resources-object/userevent-object.md)
     * [SupportDraftMessage object](resources-api/resources-object/supportdraftmessage-object.md)
     * [User object](resources-api/resources-object/user-object.md)
-    * [UserProvider object](resources-api/resources-object/userprovider-object.md)
 * [Webhook](webhook/README.md)
   * [Overviews](webhook/overviews.md)
   * [Events](webhook/events/README.md)
