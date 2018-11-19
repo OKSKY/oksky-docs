@@ -79,9 +79,134 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "rooms",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1"
+    },
+    "attributes": {
+      "name": "mint-hamstrung-show-1-GfWWnb8pNgo",
+      "description": "",
+      "is_private": false,
+      "settings": {
+        "message_classify": true,
+        "message_dialog": false
+      },
+      "kind": "support_room",
+      "enabled": null,
+      "room_code": null,
+      "awaiting_support": true,
+      "created_at_unix": 1542602860,
+      "created_at": "2018-11-19T13:47:40.535+09:00",
+      "is_external": false
+    },
+    "relationships": {
+      "messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/messages"
+        },
+        "data": [
+          {
+            "type": "messages",
+            "id": "1"
+          }
+        ]
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "1"
+          }
+        ]
+      },
+      "users": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/users",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/users"
+        },
+        "data": [
+          {
+            "type": "users",
+            "id": "2"
+          }
+        ]
+      },
+      "create_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/create_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/create_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_message"
+        },
+        "data": {
+          "type": "messages",
+          "id": "1"
+        }
+      },
+      "latest_memo": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_memo",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_memo"
+        },
+        "data": null
+      },
+      "client": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/client",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/client"
+        },
+        "data": {
+          "type": "clients",
+          "id": "1"
+        }
+      },
+      "helped_room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/helped_room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/helped_room"
+        },
+        "data": null
+      },
+      "supports": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/supports",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/supports"
+        },
+        "data": []
+      },
+      "support_draft_messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/support_draft_messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/support_draft_messages"
+        },
+        "data": []
+      },
+      "suggestion": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/suggestion",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/suggestion"
+        }
+      },
+      "memos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/memos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/memos"
+        },
+        "data": []
+      }
+    }
   }
 }
 ```
@@ -128,15 +253,143 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "rooms",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1"
+      },
+      "attributes": {
+        "name": "mint-hamstrung-show-1-GfWWnb8pNgo",
+        "description": "",
+        "is_private": false,
+        "settings": {
+          "message_classify": true,
+          "message_dialog": false
+        },
+        "kind": "support_room",
+        "enabled": null,
+        "room_code": null,
+        "awaiting_support": true,
+        "created_at_unix": 1542602860,
+        "created_at": "2018-11-19T13:47:40.535+09:00",
+        "is_external": false
+      },
+      "relationships": {
+        "messages": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/messages",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/messages"
+          },
+          "data": [
+            {
+              "type": "messages",
+              "id": "1"
+            }
+          ]
+        },
+        "members": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/members",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/members"
+          },
+          "data": [
+            {
+              "type": "members",
+              "id": "1"
+            }
+          ]
+        },
+        "users": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/users",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/users"
+          },
+          "data": [
+            {
+              "type": "users",
+              "id": "2"
+            }
+          ]
+        },
+        "create_user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/create_user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/create_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        },
+        "latest_message": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_message",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_message"
+          },
+          "data": {
+            "type": "messages",
+            "id": "1"
+          }
+        },
+        "latest_memo": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_memo",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_memo"
+          },
+          "data": null
+        },
+        "client": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/client",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/client"
+          },
+          "data": {
+            "type": "clients",
+            "id": "1"
+          }
+        },
+        "helped_room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/helped_room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/helped_room"
+          },
+          "data": null
+        },
+        "supports": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/supports",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/supports"
+          },
+          "data": []
+        },
+        "support_draft_messages": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/support_draft_messages",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/support_draft_messages"
+          },
+          "data": []
+        },
+        "suggestion": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/suggestion",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/suggestion"
+          }
+        },
+        "memos": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/memos",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/memos"
+          },
+          "data": []
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -185,11 +438,115 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "rooms",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2"
+    },
+    "attributes": {
+      "name": "navy-intelligent-quiet20181119",
+      "description": "",
+      "is_private": false,
+      "settings": {},
+      "kind": "support_room",
+      "enabled": null,
+      "room_code": null,
+      "awaiting_support": false,
+      "created_at_unix": 1542603242,
+      "created_at": "2018-11-19T13:54:02.730+09:00",
+      "is_external": false
+    },
+    "relationships": {
+      "messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/messages"
+        },
+        "data": []
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/members"
+        },
+        "data": []
+      },
+      "users": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/users",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/users"
+        },
+        "data": []
+      },
+      "create_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/create_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/create_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/latest_message"
+        },
+        "data": null
+      },
+      "latest_memo": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/latest_memo",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/latest_memo"
+        },
+        "data": null
+      },
+      "client": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/client",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/client"
+        },
+        "data": {
+          "type": "clients",
+          "id": "1"
+        }
+      },
+      "helped_room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/helped_room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/helped_room"
+        },
+        "data": null
+      },
+      "supports": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/supports",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/supports"
+        },
+        "data": []
+      },
+      "support_draft_messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/support_draft_messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/support_draft_messages"
+        },
+        "data": []
+      },
+      "suggestion": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/suggestion",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/suggestion"
+        }
+      },
+      "memos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/relationships/memos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/2/memos"
+        },
+        "data": []
+      }
+    }
   }
 }
 ```
@@ -241,9 +598,143 @@ application/vnd.api+json
   "data": {
     "id": "1",
     "type": "rooms",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1"
+    },
+    "attributes": {
+      "name": "mint-hamstrung-show-1-GfWWnb8pNgo",
+      "description": "",
+      "is_private": false,
+      "settings": {
+        "message_classify": true,
+        "message_dialog": false
+      },
+      "kind": "support_room",
+      "enabled": null,
+      "room_code": null,
+      "awaiting_support": true,
+      "created_at_unix": 1542602860,
+      "created_at": "2018-11-19T13:47:40.535+09:00",
+      "is_external": false
+    },
+    "relationships": {
+      "messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/messages"
+        },
+        "data": [
+          {
+            "type": "messages",
+            "id": "1"
+          }
+        ]
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "1"
+          }
+        ]
+      },
+      "users": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/users",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/users"
+        },
+        "data": [
+          {
+            "type": "users",
+            "id": "2"
+          }
+        ]
+      },
+      "create_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/create_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/create_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_message"
+        },
+        "data": {
+          "type": "messages",
+          "id": "1"
+        }
+      },
+      "latest_memo": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_memo",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_memo"
+        },
+        "data": null
+      },
+      "client": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/client",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/client"
+        },
+        "data": {
+          "type": "clients",
+          "id": "1"
+        }
+      },
+      "helped_room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/helped_room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/helped_room"
+        },
+        "data": null
+      },
+      "supports": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/supports",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/supports"
+        },
+        "data": []
+      },
+      "support_draft_messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/support_draft_messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/support_draft_messages"
+        },
+        "data": []
+      },
+      "suggestion": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/suggestion",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/suggestion"
+        }
+      },
+      "memos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/memos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/memos"
+        },
+        "data": []
+      }
+    }
+  },
+  "meta": {
+    "warnings": [
+      {
+        "title": "Param not allowed",
+        "detail": "kind is not allowed.",
+        "code": "105"
+      }
+    ]
   }
 }
 ```
@@ -371,11 +862,64 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "2",
       "type": "support_draft_messages",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "/rapi/v1/support_draft_messages/2"
+      },
+      "attributes": {
+        "message_content": "Message Content",
+        "kind": "text",
+        "settings": {},
+        "status": "approved",
+        "resolved_time_unix": 1542605731,
+        "comment": null,
+        "create_user_resolved_read_time_unix": null,
+        "created_at_unix": 1542603677,
+        "updated_at_unix": 1542605731
+      },
+      "relationships": {
+        "support": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/support",
+            "related": "/rapi/v1/support_draft_messages/2/support"
+          },
+          "data": {
+            "type": "supports",
+            "id": "2"
+          }
+        },
+        "resolved_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+            "related": "/rapi/v1/support_draft_messages/2/resolved_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "created_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/created_user",
+            "related": "/rapi/v1/support_draft_messages/2/created_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "room": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/room",
+            "related": "/rapi/v1/support_draft_messages/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        }
+      }
     }
   ]
 }
@@ -421,11 +965,64 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "2",
       "type": "support_draft_messages",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "/rapi/v1/support_draft_messages/2"
+      },
+      "attributes": {
+        "message_content": "Message Content",
+        "kind": "text",
+        "settings": {},
+        "status": "rejected",
+        "resolved_time_unix": 1542606103,
+        "comment": null,
+        "create_user_resolved_read_time_unix": null,
+        "created_at_unix": 1542603677,
+        "updated_at_unix": 1542606103
+      },
+      "relationships": {
+        "support": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/support",
+            "related": "/rapi/v1/support_draft_messages/2/support"
+          },
+          "data": {
+            "type": "supports",
+            "id": "2"
+          }
+        },
+        "resolved_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+            "related": "/rapi/v1/support_draft_messages/2/resolved_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "created_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/created_user",
+            "related": "/rapi/v1/support_draft_messages/2/created_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "room": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/2/relationships/room",
+            "related": "/rapi/v1/support_draft_messages/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        }
+      }
     }
   ]
 }
@@ -470,11 +1067,128 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "3",
     "type": "rooms",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3"
+    },
+    "attributes": {
+      "name": "lavendar-bald-notebook20181119",
+      "description": "",
+      "is_private": false,
+      "settings": {},
+      "kind": "group_room",
+      "enabled": null,
+      "room_code": null,
+      "awaiting_support": false,
+      "created_at_unix": 1542606135,
+      "created_at": "2018-11-19T14:42:15.079+09:00",
+      "is_external": false
+    },
+    "relationships": {
+      "messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/messages"
+        },
+        "data": []
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "2"
+          }
+        ]
+      },
+      "users": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/users",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/users"
+        },
+        "data": [
+          {
+            "type": "users",
+            "id": "1"
+          }
+        ]
+      },
+      "create_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/create_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/create_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/latest_message"
+        },
+        "data": null
+      },
+      "latest_memo": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/latest_memo",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/latest_memo"
+        },
+        "data": null
+      },
+      "client": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/client",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/client"
+        },
+        "data": {
+          "type": "clients",
+          "id": "1"
+        }
+      },
+      "helped_room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/helped_room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/helped_room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "supports": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/supports",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/supports"
+        },
+        "data": []
+      },
+      "support_draft_messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/support_draft_messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/support_draft_messages"
+        },
+        "data": []
+      },
+      "suggestion": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/suggestion",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/suggestion"
+        }
+      },
+      "memos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/relationships/memos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/3/memos"
+        },
+        "data": []
+      }
+    }
   }
 }
 ```
@@ -518,11 +1232,125 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "5",
     "type": "rooms",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5"
+    },
+    "attributes": {
+      "name": "spinach-lavish-owl20181119",
+      "description": "",
+      "is_private": true,
+      "settings": {},
+      "kind": "direct_room",
+      "enabled": null,
+      "room_code": null,
+      "awaiting_support": false,
+      "created_at_unix": 1542606247,
+      "created_at": "2018-11-19T14:44:07.138+09:00",
+      "is_external": false
+    },
+    "relationships": {
+      "messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/messages"
+        },
+        "data": []
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "5"
+          }
+        ]
+      },
+      "users": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/users",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/users"
+        },
+        "data": [
+          {
+            "type": "users",
+            "id": "1"
+          }
+        ]
+      },
+      "create_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/create_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/create_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/latest_message"
+        },
+        "data": null
+      },
+      "latest_memo": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/latest_memo",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/latest_memo"
+        },
+        "data": null
+      },
+      "client": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/client",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/client"
+        },
+        "data": {
+          "type": "clients",
+          "id": "1"
+        }
+      },
+      "helped_room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/helped_room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/helped_room"
+        },
+        "data": null
+      },
+      "supports": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/supports",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/supports"
+        },
+        "data": []
+      },
+      "support_draft_messages": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/support_draft_messages",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/support_draft_messages"
+        },
+        "data": []
+      },
+      "suggestion": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/suggestion",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/suggestion"
+        }
+      },
+      "memos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/relationships/memos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/5/memos"
+        },
+        "data": []
+      }
+    }
   }
 }
 ```
@@ -568,7 +1396,27 @@ application/vnd.api+json
   "data": {
     "type": "room_counts",
     "id": "1",
-    "attributes": {...}
+    "attributes": {
+      "total_replied_count": 1,
+      "replied_count_by_supporter": {
+        "1": 1
+      },
+      "total_unreplied_count": 0,
+      "unreplied_count_by_supporter": {},
+      "supporting_rooms_count": 1,
+      "awaiting_support_count": 1,
+      "unread_supports_messages_by_user_count": {
+        "1": 1
+      },
+      "unread_private_messages_by_user_count": {},
+      "private_rooms_by_user_count": {},
+      "support_draft_messages_in_review_by_user_count": {},
+      "total_support_draft_messages_in_review": 0,
+      "unread_support_draft_messages_approved_by_user_count": {},
+      "unread_support_draft_messages_rejected_by_user_count": {
+        "1": 1
+      }
+    }
   }
 }
 ```
