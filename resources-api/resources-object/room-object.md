@@ -40,7 +40,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e59c43089a9d822572e4)
 
-{% api-method method="get" host="" path="/rapi/v1/rooms/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 find room
 {% endapi-method-summary %}
@@ -90,7 +90,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/rooms" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms" %}
 {% api-method-summary %}
 search rooms
 {% endapi-method-summary %}
@@ -144,7 +144,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/rooms" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms" %}
 {% api-method-summary %}
 create room
 {% endapi-method-summary %}
@@ -198,7 +198,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 update rooms
 {% endapi-method-summary %}
@@ -252,7 +252,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/rooms/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 delete room
 {% endapi-method-summary %}
@@ -292,7 +292,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/rooms/{:id}/history" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/history" %}
 {% api-method-summary %}
 history
 {% endapi-method-summary %}
@@ -335,7 +335,7 @@ id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
 {% api-method-summary %}
 approve support draft messages
 {% endapi-method-summary %}
@@ -385,7 +385,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
 {% api-method-summary %}
 reject support draft messages
 {% endapi-method-summary %}
@@ -435,7 +435,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/rooms/create\_or\_find\_group\_room" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/create\_or\_find\_group\_room" %}
 {% api-method-summary %}
 create or find group room
 {% endapi-method-summary %}
@@ -483,7 +483,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/rooms/create\_or\_find\_direct\_room" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/create\_or\_find\_direct\_room" %}
 {% api-method-summary %}
 create or find direct room
 {% endapi-method-summary %}
@@ -531,7 +531,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/rooms/room\_counts" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/room\_counts" %}
 {% api-method-summary %}
 room counts
 {% endapi-method-summary %}
