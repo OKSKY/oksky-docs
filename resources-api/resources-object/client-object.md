@@ -19,7 +19,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/efca1700c2eb1ff3f4a6)
 
-{% api-method method="get" host="" path="/rapi/v1/clients/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 find client
 {% endapi-method-summary %}
@@ -70,7 +70,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/clients" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients" %}
 {% api-method-summary %}
 search clients
 {% endapi-method-summary %}
@@ -124,7 +124,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/clients" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients" %}
 {% api-method-summary %}
 create client
 {% endapi-method-summary %}
@@ -178,7 +178,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/clients/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 update clients
 {% endapi-method-summary %}
@@ -232,7 +232,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/clients/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 delete client
 {% endapi-method-summary %}
@@ -272,7 +272,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/clients/{:id}/login" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}/login" %}
 {% api-method-summary %}
 login
 {% endapi-method-summary %}
