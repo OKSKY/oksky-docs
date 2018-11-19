@@ -14,7 +14,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/981e77b11762be50c5d9)
 
-{% api-method method="get" host="" path="/rapi/v1/suggestions/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/{:id}" %}
 {% api-method-summary %}
 find suggestion
 {% endapi-method-summary %}
@@ -65,7 +65,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/suggestions" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions" %}
 {% api-method-summary %}
 search suggestions
 {% endapi-method-summary %}
@@ -119,7 +119,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/suggestions" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions" %}
 {% api-method-summary %}
 create suggestion
 {% endapi-method-summary %}
@@ -173,7 +173,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/suggestions/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/{:id}" %}
 {% api-method-summary %}
 update suggestions
 {% endapi-method-summary %}
@@ -227,7 +227,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/suggestions/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/{:id}" %}
 {% api-method-summary %}
 delete suggestion
 {% endapi-method-summary %}
