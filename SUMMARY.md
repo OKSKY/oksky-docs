@@ -2,7 +2,6 @@
 
 * [OK SKY API Reference](README.md)
 * [Resources API](resources-api/README.md)
-  * [Resources API Overviews](resources-api/overviews.md)
   * [Resources object](resources-api/resources-object/README.md)
     * [Room object](resources-api/resources-object/room-object.md)
     * [Message object](resources-api/resources-object/message-object.md)
@@ -18,7 +17,6 @@
     * [SupportDraftMessage object](resources-api/resources-object/supportdraftmessage-object.md)
     * [User object](resources-api/resources-object/user-object.md)
 * [Webhook](webhook/README.md)
-  * [Webhook Overviews](webhook/overviews.md)
   * [Events](webhook/events/README.md)
     * [kind of messages event](webhook/events/kind-of-messages-event.md)
     * [kind of message\_providers event](webhook/events/kind-of-message_providers-event.md)
