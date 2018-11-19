@@ -23,7 +23,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b7c22f61358e725d294b)
 
-{% api-method method="get" host="" path="/rapi/v1/supports/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/{:id}" %}
 {% api-method-summary %}
 find support
 {% endapi-method-summary %}
@@ -74,7 +74,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/supports" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports" %}
 {% api-method-summary %}
 search supports
 {% endapi-method-summary %}
@@ -128,7 +128,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/supports/search" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/search" %}
 {% api-method-summary %}
 search
 {% endapi-method-summary %}
@@ -169,7 +169,7 @@ application/vnd.api+json
 {% endapi-method %}
 
 
-{% api-method method="get" host="" path="/rapi/v1/supports/export" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/export" %}
 {% api-method-summary %}
 export
 {% endapi-method-summary %}
@@ -210,7 +210,7 @@ id,room_id,room_name,start_time,end_time,user_id,user_name
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/supports/end_support" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/end_support" %}
 {% api-method-summary %}
 end support
 {% endapi-method-summary %}
@@ -258,7 +258,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/supports/reassign" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/reassign" %}
 {% api-method-summary %}
 reassign
 {% endapi-method-summary %}
@@ -312,7 +312,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/supports/reopen" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/reopen" %}
 {% api-method-summary %}
 reopen
 {% endapi-method-summary %}
