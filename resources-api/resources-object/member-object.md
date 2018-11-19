@@ -18,7 +18,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4a557e89a56ea430647b)
 
-{% api-method method="get" host="" path="/rapi/v1/members/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 find member
 {% endapi-method-summary %}
@@ -69,7 +69,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/members" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members" %}
 {% api-method-summary %}
 search members
 {% endapi-method-summary %}
@@ -123,7 +123,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/members" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members" %}
 {% api-method-summary %}
 create member
 {% endapi-method-summary %}
@@ -177,7 +177,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/members/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 update members
 {% endapi-method-summary %}
@@ -231,7 +231,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/members/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 delete member
 {% endapi-method-summary %}
