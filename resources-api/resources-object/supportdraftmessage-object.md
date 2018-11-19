@@ -31,7 +31,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/39359c5335f2548543e9)
 
-{% api-method method="get" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
 find support draft message
 {% endapi-method-summary %}
@@ -82,7 +82,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/support_draft_messages" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages" %}
 {% api-method-summary %}
 search support draft messages
 {% endapi-method-summary %}
@@ -136,7 +136,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="/rapi/v1/support_draft_messages" %}
+{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages" %}
 {% api-method-summary %}
 create support draft message
 {% endapi-method-summary %}
@@ -190,7 +190,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
 update support draft messages
 {% endapi-method-summary %}
@@ -244,7 +244,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
 {% api-method-summary %}
 delete support draft message
 {% endapi-method-summary %}
@@ -284,7 +284,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/support_draft_messages/mark_read_all_resolved" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/mark_read_all_resolved" %}
 {% api-method-summary %}
 mark read all resolved
 {% endapi-method-summary %}
@@ -334,7 +334,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/approve" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/approve" %}
 {% api-method-summary %}
 approve
 {% endapi-method-summary %}
@@ -382,7 +382,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/reject" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/reject" %}
 {% api-method-summary %}
 reject
 {% endapi-method-summary %}
@@ -430,7 +430,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/rapi/v1/support_draft_messages/{:id}/mark_read" %}
+{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/mark_read" %}
 {% api-method-summary %}
 mark read
 {% endapi-method-summary %}
