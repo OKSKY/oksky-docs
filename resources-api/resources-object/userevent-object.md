@@ -16,7 +16,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/20b7f3930eb31c9ebf89)
 
-{% api-method method="get" host="" path="/rapi/v1/user_events/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/{:id}" %}
 {% api-method-summary %}
 find user event
 {% endapi-method-summary %}
@@ -67,7 +67,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/rapi/v1/user_events" %}
+{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events" %}
 {% api-method-summary %}
 search user events
 {% endapi-method-summary %}
