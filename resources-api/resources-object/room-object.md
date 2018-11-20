@@ -20,11 +20,11 @@
 
 | Field | Description |
 | :--- | :--- |
-| id |  |
-| name |  |
-| is\_private |  |
-| kind |  |
-| awaiting\_support |  |
+| id | ID |
+| name | Roomの名前 |
+| is\_private | Booleanまたは1,0で指定 |
+| kind | 次の項目から選択 [direct_room, group_room, support_room] |
+| awaiting\_support | Booleanまたは1,0で指定 |
 | replied |  |
 | starred |  |
 | private_rooms |  |
@@ -34,7 +34,7 @@
 | support_rooms_with_active_support |  |
 | support_rooms_with_active_or_awaiting_support |  |
 | current_users_support_rooms_with_active_or_awaiting_support |  |
-| name_like |  |
+| name_like | Room名の部分一致 |
 | support_room_name_like |  |
 | sort_unread_read_for_user_id |  |
 
