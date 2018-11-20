@@ -55,9 +55,24 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "master_keywords",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1"
+    },
+    "attributes": {
+      "key_name": "customer_code",
+      "key_title": "",
+      "suggestions": [
+        "1234"
+      ]
+    },
+    "relationships": {
+      "user_infos": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/relationships/user_infos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/user_infos"
+        }
+      }
+    }
   }
 }
 ```
@@ -104,15 +119,33 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "master_keywords",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1"
+      },
+      "attributes": {
+        "key_name": "customer_code",
+        "key_title": "",
+        "suggestions": [
+          "1234"
+        ]
+      },
+      "relationships": {
+        "user_infos": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/relationships/user_infos",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/user_infos"
+          }
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -161,13 +194,22 @@ set your access token
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "master_keywords",
-    "links": {...},
-    "attributes": {...},
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/2"
+    },
+    "attributes": {
+      "key_name": "login_key",
+      "key_title": "",
+      "suggestions": []
+    },
     "relationships": {
       "user_infos": {
-        "links": {...}
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/2/relationships/user_infos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/2/user_infos"
+        }
       }
     }
   }
@@ -221,11 +263,22 @@ set your access token
   "data": {
     "id": "1",
     "type": "master_keywords",
-    "links": {...},
-    "attributes": {...},
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1"
+    },
+    "attributes": {
+      "key_name": "customer_code",
+      "key_title": "",
+      "suggestions": [
+        "1234"
+      ]
+    },
     "relationships": {
       "user_infos": {
-        "links": {...}
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/relationships/user_infos",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/1/user_infos"
+        }
       }
     }
   }
