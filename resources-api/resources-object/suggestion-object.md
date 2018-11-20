@@ -54,9 +54,30 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "suggestions",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1"
+    },
+    "attributes": {
+      "suggestion_messages_data": [
+        {
+          "kind": "text",
+          "content": "Content",
+          "settings": {}
+        }
+      ]
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -103,15 +124,39 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "suggestions",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1"
+      },
+      "attributes": {
+        "suggestion_messages_data": [
+          {
+            "kind": "text",
+            "content": "Content",
+            "settings": {}
+          }
+        ]
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -162,9 +207,29 @@ set your access token
   "data": {
     "id": "1",
     "type": "suggestions",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1"
+    },
+    "attributes": {
+      "suggestion_messages_data": [
+        {
+          "kind": "text",
+          "content": "test"
+        }
+      ]
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -216,9 +281,29 @@ application/vnd.api+json
   "data": {
     "id": "1",
     "type": "suggestions",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1"
+    },
+    "attributes": {
+      "suggestion_messages_data": [
+        {
+          "kind": "text",
+          "content": "test"
+        }
+      ]
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/suggestions/1/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
