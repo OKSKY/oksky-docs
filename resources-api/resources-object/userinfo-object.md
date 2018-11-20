@@ -53,9 +53,34 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "user_infos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1"
+    },
+    "attributes": {
+      "value_data": "1234"
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "master_keyword": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/master_keyword",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/master_keyword"
+        },
+        "data": {
+          "type": "master_keywords",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -102,16 +127,43 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "user_infos",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
-    },
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1"
+      },
+      "attributes": {
+        "value_data": "1234"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        },
+        "master_keyword": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/master_keyword",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/master_keyword"
+          },
+          "data": {
+            "type": "master_keywords",
+            "id": "1"
+          }
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -160,11 +212,33 @@ set your access token
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "user_infos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/2"
+    },
+    "attributes": {
+      "value_data": null
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/2/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/2/user"
+        },
+        "data": null
+      },
+      "master_keyword": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/2/relationships/master_keyword",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/2/master_keyword"
+        },
+        "data": {
+          "type": "master_keywords",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -216,9 +290,34 @@ application/vnd.api+json
   "data": {
     "id": "1",
     "type": "user_infos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1"
+    },
+    "attributes": {
+      "value_data": "1234"
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "master_keyword": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/relationships/master_keyword",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_infos/1/master_keyword"
+        },
+        "data": {
+          "type": "master_keywords",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
