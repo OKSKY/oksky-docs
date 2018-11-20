@@ -70,11 +70,45 @@ Content-Type: application/vnd.api+json
 
 {
   "data": {
-    "id": "187",
+    "id": "1",
     "type": "messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1"
+    },
+    "attributes": {
+      "content": "first message",
+      "kind": "text",
+      "settings": {},
+      "status": "posted",
+      "info": {},
+      "tags": [],
+      "created_at": "2018-11-19T13:47:40.865+09:00",
+      "deleted_at": null,
+      "updated_at": "2018-11-19T13:47:40.865+09:00",
+      "created_at_unix": 1542602860,
+      "deleted_at_unix": null
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      }
     }
   }
 }
@@ -122,15 +156,95 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "messages",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1"
+      },
+      "attributes": {
+        "content": "first message",
+        "kind": "text",
+        "settings": {},
+        "status": "posted",
+        "info": {},
+        "tags": [],
+        "created_at": "2018-11-19T13:47:40.865+09:00",
+        "deleted_at": null,
+        "updated_at": "2018-11-19T13:47:40.865+09:00",
+        "created_at_unix": 1542602860,
+        "deleted_at_unix": null
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "messages",
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/2"
+      },
+      "attributes": {
+        "content": "Message Content",
+        "kind": "text",
+        "settings": {},
+        "status": "posted",
+        "info": {},
+        "tags": [],
+        "created_at": "2018-11-19T14:01:17.850+09:00",
+        "deleted_at": null,
+        "updated_at": "2018-11-19T14:35:31.354+09:00",
+        "created_at_unix": 1542603677,
+        "deleted_at_unix": null
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/2/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/2/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/2/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        }
+      }
     }
   ],
   "meta": {
-    "record_count": 1
+    "record_count": 2
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -186,11 +300,46 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "3",
     "type": "messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/3"
+    },
+    "attributes": {
+      "content": "textt",
+      "kind": "text",
+      "settings": {},
+      "status": "posted",
+      "info": {},
+      "tags": [],
+      "created_at": "2018-11-20T10:06:25.393+09:00",
+      "deleted_at": null,
+      "updated_at": "2018-11-20T10:06:25.393+09:00",
+      "created_at_unix": 1542675985,
+      "deleted_at_unix": null
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/3/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/3/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/3/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/3/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -242,9 +391,44 @@ application/vnd.api+json
   "data": {
     "id": "1",
     "type": "messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1"
+    },
+    "attributes": {
+      "content": "first message",
+      "kind": "text",
+      "settings": {},
+      "status": "posted",
+      "info": {},
+      "tags": [],
+      "created_at": "2018-11-19T13:47:40.865+09:00",
+      "deleted_at": null,
+      "updated_at": "2018-11-19T13:47:40.865+09:00",
+      "created_at_unix": 1542602860,
+      "deleted_at_unix": null
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      }
+    }
   }
 }
 ```
