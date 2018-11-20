@@ -612,7 +612,7 @@ application/vnd.api+json
       "kind": "support_room",
       "enabled": null,
       "room_code": null,
-      "awaiting_support": true,
+      "awaiting_support": false,
       "created_at_unix": 1542602860,
       "created_at": "2018-11-19T13:47:40.535+09:00",
       "is_external": false
@@ -627,6 +627,14 @@ application/vnd.api+json
           {
             "type": "messages",
             "id": "1"
+          },
+          {
+            "type": "messages",
+            "id": "5"
+          },
+          {
+            "type": "messages",
+            "id": "2"
           }
         ]
       },
@@ -639,6 +647,14 @@ application/vnd.api+json
           {
             "type": "members",
             "id": "1"
+          },
+          {
+            "type": "members",
+            "id": "3"
+          },
+          {
+            "type": "members",
+            "id": "8"
           }
         ]
       },
@@ -650,7 +666,15 @@ application/vnd.api+json
         "data": [
           {
             "type": "users",
+            "id": "1"
+          },
+          {
+            "type": "users",
             "id": "2"
+          },
+          {
+            "type": "users",
+            "id": "3"
           }
         ]
       },
@@ -671,7 +695,7 @@ application/vnd.api+json
         },
         "data": {
           "type": "messages",
-          "id": "1"
+          "id": "2"
         }
       },
       "latest_memo": {
@@ -679,7 +703,10 @@ application/vnd.api+json
           "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/latest_memo",
           "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/latest_memo"
         },
-        "data": null
+        "data": {
+          "type": "memos",
+          "id": "2"
+        }
       },
       "client": {
         "links": {
@@ -703,14 +730,36 @@ application/vnd.api+json
           "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/supports",
           "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/supports"
         },
-        "data": []
+        "data": [
+          {
+            "type": "supports",
+            "id": "2"
+          },
+          {
+            "type": "supports",
+            "id": "3"
+          },
+          {
+            "type": "supports",
+            "id": "4"
+          }
+        ]
       },
       "support_draft_messages": {
         "links": {
           "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/support_draft_messages",
           "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/support_draft_messages"
         },
-        "data": []
+        "data": [
+          {
+            "type": "support_draft_messages",
+            "id": "4"
+          },
+          {
+            "type": "support_draft_messages",
+            "id": "2"
+          }
+        ]
       },
       "suggestion": {
         "links": {
@@ -723,18 +772,18 @@ application/vnd.api+json
           "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/relationships/memos",
           "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/1/memos"
         },
-        "data": []
+        "data": [
+          {
+            "type": "memos",
+            "id": "2"
+          },
+          {
+            "type": "memos",
+            "id": "1"
+          }
+        ]
       }
     }
-  },
-  "meta": {
-    "warnings": [
-      {
-        "title": "Param not allowed",
-        "detail": "kind is not allowed.",
-        "code": "105"
-      }
-    ]
   }
 }
 ```
@@ -770,7 +819,7 @@ application/vnd.api+json
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
