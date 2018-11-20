@@ -61,11 +61,77 @@ Content-Type: application/vnd.api+json
 
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "supports",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2"
+    },
+    "attributes": {
+      "end_time_unix": null,
+      "start_time_unix": 1542603555
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/latest_message"
+        },
+        "data": {
+          "type": "messages",
+          "id": "2"
+        }
+      },
+      "customer": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/customer",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/customer"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "1"
+          },
+          {
+            "type": "members",
+            "id": "3"
+          },
+          {
+            "type": "members",
+            "id": "8"
+          }
+        ]
+      }
+    }
   }
 }
 ```
@@ -110,17 +176,86 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "2",
       "type": "supports",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2"
+      },
+      "attributes": {
+        "end_time_unix": null,
+        "start_time_unix": 1542603555
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "latest_message": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/latest_message",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/latest_message"
+          },
+          "data": {
+            "type": "messages",
+            "id": "2"
+          }
+        },
+        "customer": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/customer",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/customer"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        },
+        "members": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/members",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/members"
+          },
+          "data": [
+            {
+              "type": "members",
+              "id": "1"
+            },
+            {
+              "type": "members",
+              "id": "3"
+            },
+            {
+              "type": "members",
+              "id": "8"
+            }
+          ]
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -245,11 +380,77 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "supports",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2"
+    },
+    "attributes": {
+      "end_time_unix": 1542679562,
+      "start_time_unix": 1542603555
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/latest_message"
+        },
+        "data": {
+          "type": "messages",
+          "id": "2"
+        }
+      },
+      "customer": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/customer",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/customer"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "1"
+          },
+          {
+            "type": "members",
+            "id": "3"
+          },
+          {
+            "type": "members",
+            "id": "8"
+          }
+        ]
+      }
+    }
   }
 }
 ```
@@ -294,17 +495,159 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "3",
       "type": "supports",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3"
+      },
+      "attributes": {
+        "end_time_unix": null,
+        "start_time_unix": 1542679579
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "latest_message": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/relationships/latest_message",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/latest_message"
+          },
+          "data": {
+            "type": "messages",
+            "id": "2"
+          }
+        },
+        "customer": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/relationships/customer",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/customer"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        },
+        "members": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/relationships/members",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/3/members"
+          },
+          "data": [
+            {
+              "type": "members",
+              "id": "1"
+            },
+            {
+              "type": "members",
+              "id": "3"
+            },
+            {
+              "type": "members",
+              "id": "8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "supports",
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2"
+      },
+      "attributes": {
+        "end_time_unix": 1542679562,
+        "start_time_unix": 1542603555
+      },
+      "relationships": {
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "latest_message": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/latest_message",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/latest_message"
+          },
+          "data": {
+            "type": "messages",
+            "id": "2"
+          }
+        },
+        "customer": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/customer",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/customer"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        },
+        "members": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/relationships/members",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/2/members"
+          },
+          "data": [
+            {
+              "type": "members",
+              "id": "1"
+            },
+            {
+              "type": "members",
+              "id": "3"
+            },
+            {
+              "type": "members",
+              "id": "8"
+            }
+          ]
+        }
+      }
     }
   ],
   "meta": {
-    "record_count": 1
+    "record_count": 2
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -347,11 +690,77 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "3",
+    "id": "4",
     "type": "supports",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4"
+    },
+    "attributes": {
+      "end_time_unix": null,
+      "start_time_unix": 1542679622
+    },
+    "relationships": {
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "latest_message": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/relationships/latest_message",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/latest_message"
+        },
+        "data": {
+          "type": "messages",
+          "id": "2"
+        }
+      },
+      "customer": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/relationships/customer",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/customer"
+        },
+        "data": {
+          "type": "users",
+          "id": "2"
+        }
+      },
+      "members": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/relationships/members",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/supports/4/members"
+        },
+        "data": [
+          {
+            "type": "members",
+            "id": "1"
+          },
+          {
+            "type": "members",
+            "id": "3"
+          },
+          {
+            "type": "members",
+            "id": "8"
+          }
+        ]
+      }
+    }
   }
 }
 ```
