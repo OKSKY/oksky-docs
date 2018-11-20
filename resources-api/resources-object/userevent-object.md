@@ -56,9 +56,27 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "user_events",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1"
+    },
+    "attributes": {
+      "resource_type": null,
+      "kind": "signin",
+      "resource_id": null,
+      "created_at_unix": 1542602792
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -105,15 +123,86 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "user_events",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1"
+      },
+      "attributes": {
+        "resource_type": null,
+        "kind": "signin",
+        "resource_id": null,
+        "created_at_unix": 1542602792
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/1/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "user_events",
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/2"
+      },
+      "attributes": {
+        "resource_type": null,
+        "kind": "signin",
+        "resource_id": null,
+        "created_at_unix": 1542602846
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/2/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/2/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "user_events",
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/3"
+      },
+      "attributes": {
+        "resource_type": "Room",
+        "kind": "obj_create",
+        "resource_id": 1,
+        "created_at_unix": 1542602860
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/3/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/3/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "2"
+          }
+        }
+      }
     }
   ],
   "meta": {
-    "record_count": 1
+    "record_count": 3
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
