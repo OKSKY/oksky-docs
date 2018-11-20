@@ -57,9 +57,28 @@ Content-Type: application/vnd.api+json
   "data": {
     "id": "1",
     "type": "memos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1"
+    },
+    "attributes": {
+      "resource_id": 1,
+      "resource_type": "Room",
+      "user_id": 1,
+      "text": "Memo",
+      "created_at_unix": 1542679299
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -106,15 +125,37 @@ application/vnd.api+json
     {
       "id": "1",
       "type": "memos",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1"
+      },
+      "attributes": {
+        "resource_id": 1,
+        "resource_type": "Room",
+        "user_id": 1,
+        "text": "Memo",
+        "created_at_unix": 1542679299
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/relationships/user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -163,11 +204,30 @@ set your access token
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "memos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/2"
+    },
+    "attributes": {
+      "resource_id": 1,
+      "resource_type": "Room",
+      "user_id": 1,
+      "text": null,
+      "created_at_unix": 1542679363
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/2/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/2/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -219,9 +279,28 @@ application/vnd.api+json
   "data": {
     "id": "1",
     "type": "memos",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1"
+    },
+    "attributes": {
+      "resource_id": 1,
+      "resource_type": "Room",
+      "user_id": 1,
+      "text": "Memo",
+      "created_at_unix": 1542679299
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/relationships/user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/1/user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
