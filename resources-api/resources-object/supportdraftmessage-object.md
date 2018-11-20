@@ -69,11 +69,64 @@ Content-Type: application/vnd.api+json
 
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2"
+    },
+    "attributes": {
+      "message_content": "Message Content",
+      "kind": "text",
+      "settings": {},
+      "status": "rejected",
+      "resolved_time_unix": 1542606103,
+      "comment": null,
+      "create_user_resolved_read_time_unix": null,
+      "created_at_unix": 1542603677,
+      "updated_at_unix": 1542606103
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/support",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/resolved_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "created_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/created_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -118,17 +171,73 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "2",
       "type": "support_draft_messages",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2"
+      },
+      "attributes": {
+        "message_content": "Message Content",
+        "kind": "text",
+        "settings": {},
+        "status": "rejected",
+        "resolved_time_unix": 1542606103,
+        "comment": null,
+        "create_user_resolved_read_time_unix": null,
+        "created_at_unix": 1542603677,
+        "updated_at_unix": 1542606103
+      },
+      "relationships": {
+        "support": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/support",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/support"
+          },
+          "data": {
+            "type": "supports",
+            "id": "2"
+          }
+        },
+        "resolved_user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/resolved_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "created_user": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/created_user",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/created_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "room": {
+          "links": {
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/room",
+            "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        }
+      }
     }
   ],
   "meta": {
     "record_count": 1
   },
-  "links": {...}
+  "links": {
+    "first": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
 }
 ```
 {% endapi-method-response-example %}
@@ -177,11 +286,61 @@ set your access token
 ```
 {
   "data": {
-    "id": "1",
+    "id": "4",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4"
+    },
+    "attributes": {
+      "message_content": null,
+      "kind": "text",
+      "settings": {},
+      "status": "in_review",
+      "resolved_time_unix": null,
+      "comment": null,
+      "create_user_resolved_read_time_unix": null,
+      "created_at_unix": 1542681143,
+      "updated_at_unix": 1542681143
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/relationships/support",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/relationships/resolved_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/resolved_user"
+        },
+        "data": null
+      },
+      "created_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/relationships/created_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/4/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -231,11 +390,61 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2"
+    },
+    "attributes": {
+      "message_content": "Message Content",
+      "kind": "text",
+      "settings": {},
+      "status": "in_review",
+      "resolved_time_unix": null,
+      "comment": "comment",
+      "create_user_resolved_read_time_unix": null,
+      "created_at_unix": 1542603677,
+      "updated_at_unix": 1542681780
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/support",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/resolved_user"
+        },
+        "data": null
+      },
+      "created_user": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/created_user",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/relationships/room",
+          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -320,11 +529,61 @@ application/vnd.api+json
 {
   "data": [
     {
-      "id": "1",
+      "id": "4",
       "type": "support_draft_messages",
-      "links": {...},
-      "attributes": {...},
-      "relationships": {...}
+      "links": {
+        "self": "/rapi/v1/support_draft_messages/4"
+      },
+      "attributes": {
+        "message_content": null,
+        "kind": "text",
+        "settings": {},
+        "status": "approved",
+        "resolved_time_unix": null,
+        "comment": null,
+        "create_user_resolved_read_time_unix": 1542682190,
+        "created_at_unix": 1542681143,
+        "updated_at_unix": 1542682190
+      },
+      "relationships": {
+        "support": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/4/relationships/support",
+            "related": "/rapi/v1/support_draft_messages/4/support"
+          },
+          "data": {
+            "type": "supports",
+            "id": "2"
+          }
+        },
+        "resolved_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/4/relationships/resolved_user",
+            "related": "/rapi/v1/support_draft_messages/4/resolved_user"
+          },
+          "data": null
+        },
+        "created_user": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/4/relationships/created_user",
+            "related": "/rapi/v1/support_draft_messages/4/created_user"
+          },
+          "data": {
+            "type": "users",
+            "id": "1"
+          }
+        },
+        "room": {
+          "links": {
+            "self": "/rapi/v1/support_draft_messages/4/relationships/room",
+            "related": "/rapi/v1/support_draft_messages/4/room"
+          },
+          "data": {
+            "type": "rooms",
+            "id": "1"
+          }
+        }
+      }
     }
   ]
 }
@@ -369,11 +628,64 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "/rapi/v1/support_draft_messages/2"
+    },
+    "attributes": {
+      "message_content": "Message Content",
+      "kind": "text",
+      "settings": {},
+      "status": "approved",
+      "resolved_time_unix": 1542682297,
+      "comment": null,
+      "create_user_resolved_read_time_unix": null,
+      "created_at_unix": 1542603677,
+      "updated_at_unix": 1542682297
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/support",
+          "related": "/rapi/v1/support_draft_messages/2/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+          "related": "/rapi/v1/support_draft_messages/2/resolved_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "created_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/created_user",
+          "related": "/rapi/v1/support_draft_messages/2/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/room",
+          "related": "/rapi/v1/support_draft_messages/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -417,11 +729,64 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "/rapi/v1/support_draft_messages/2"
+    },
+    "attributes": {
+      "message_content": "Message Content",
+      "kind": "text",
+      "settings": {},
+      "status": "approved",
+      "resolved_time_unix": 1542682297,
+      "comment": null,
+      "create_user_resolved_read_time_unix": null,
+      "created_at_unix": 1542603677,
+      "updated_at_unix": 1542682297
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/support",
+          "related": "/rapi/v1/support_draft_messages/2/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+          "related": "/rapi/v1/support_draft_messages/2/resolved_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "created_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/created_user",
+          "related": "/rapi/v1/support_draft_messages/2/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/room",
+          "related": "/rapi/v1/support_draft_messages/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
@@ -465,11 +830,64 @@ application/vnd.api+json
 ```
 {
   "data": {
-    "id": "1",
+    "id": "2",
     "type": "support_draft_messages",
-    "links": {...},
-    "attributes": {...},
-    "relationships": {...}
+    "links": {
+      "self": "/rapi/v1/support_draft_messages/2"
+    },
+    "attributes": {
+      "message_content": "Message Content",
+      "kind": "text",
+      "settings": {},
+      "status": "approved",
+      "resolved_time_unix": 1542682297,
+      "comment": null,
+      "create_user_resolved_read_time_unix": 1542682346,
+      "created_at_unix": 1542603677,
+      "updated_at_unix": 1542682346
+    },
+    "relationships": {
+      "support": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/support",
+          "related": "/rapi/v1/support_draft_messages/2/support"
+        },
+        "data": {
+          "type": "supports",
+          "id": "2"
+        }
+      },
+      "resolved_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/resolved_user",
+          "related": "/rapi/v1/support_draft_messages/2/resolved_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "created_user": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/created_user",
+          "related": "/rapi/v1/support_draft_messages/2/created_user"
+        },
+        "data": {
+          "type": "users",
+          "id": "1"
+        }
+      },
+      "room": {
+        "links": {
+          "self": "/rapi/v1/support_draft_messages/2/relationships/room",
+          "related": "/rapi/v1/support_draft_messages/2/room"
+        },
+        "data": {
+          "type": "rooms",
+          "id": "1"
+        }
+      }
+    }
   }
 }
 ```
