@@ -13,8 +13,9 @@
 
 | Field | Description |
 | :--- | :--- |
-| room_id |  |
-| user_id |  |
+| id | ID |
+| room_id | RoomのID |
+| user_id | UserのID |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4a557e89a56ea430647b)
 
