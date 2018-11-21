@@ -11,15 +11,16 @@
 
 | Field | Description |
 | :--- | :--- |
-| active_or_end_time_gt |  |
-| to |  |
-| from |  |
-| room_or_operator |  |
-| active |  |
-| status |  |
-| user_id |  |
-| room_id |  |
-| replied |  |
+| id | ID |
+| active_or_end_time_gt | `end_time` が指定時刻以降、または空のサポート。IntegerのUNIX時間を設定 |
+| to | `start_time` が指定時刻の日付以前、または `end_time` が空のサポート。IntegerのUNIX時間を設定 |
+| from | `end_time` が指定時刻の日付以降、または空のサポート。IntegerのUNIX時間を設定 |
+| room_or_operator | Roomの名前、部屋に関連するUserの `email`, `name`, `full_name` のいずれかに部分一致 |
+| active | 1: `end_time` が空のサポート。 2: `end_time` が空ではないサポート。 |
+| status | `active`: `end_time` が空のサポート。 `ended`: `end_time` が空ではないサポート。 |
+| user_id | UserのID |
+| room_id | RoomのID |
+| replied | `end_time` が空で、関連するRoomに接客者が返信しているか。 1: 返信済 0: 未返信 |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b7c22f61358e725d294b)
 
