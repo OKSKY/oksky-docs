@@ -20,15 +20,15 @@
 
 | Field | Description |
 | :--- | :--- |
-| id |  |
-| kind |  |
-| room_id |  |
-| after_created_at |  |
-| room_kind |  |
-| before_created_at |  |
+| id | ID |
+| kind | 次の項目から選択 [text, link, image, video, audio, location, sticker, action_link, maltiple, rich_content, stamp, contact, form, item, file] |
+| room_id | RoomのID |
+| after_created_at | 指定時刻より後に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| room_kind | 次の項目から選択 [direct_room, group_room, support_room] |
+| before_created_at | 指定時刻より前に作成されたメッセージ。IntegerのUNIX時間を設定 |
 | query |  |
-| start_date |  |
-| end_date |  |
+| start_date | 指定時刻の日付以降に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| end_date | 指定時刻の日付以前に作成されたメッセージ。IntegerのUNIX時間を設定 |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23ad71d472b2b38669f3)
 
