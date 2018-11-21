@@ -26,6 +26,7 @@
 
 | Field | Description |
 | :--- | :--- |
+| id | ID |
 | uuid |  |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9012e3b8a606555cc81d)
