@@ -14,6 +14,7 @@
 
 | Field | Description |
 | :--- | :--- |
+| id | ID |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6cc5fa81ae1644800b7d)
 
