@@ -18,16 +18,17 @@
 
 | Field | Description |
 | :--- | :--- |
+| id | ID |
 | resolved_user_id |  |
 | created_user_id |  |
-| approved |  |
-| rejected |  |
-| resolved |  |
-| in_review |  |
-| read |  |
-| content_or_room_name_like |  |
-| from_created_at |  |
-| to_created_at |  |
+| approved | 1: `status` が `approved` で絞り込み |
+| rejected | 1: `status` が `rejected` で絞り込み |
+| resolved | 1: `resolved_user_id` と `resolved_time` が空でない条件で絞り込み |
+| in_review | 1: `status` が `in_review` または空、且つ、`resolved_user_id` と `resolved_time` が空で無い条件で絞り込み |
+| read | 1: `create_user_resolved_read_time` が空でない条件で絞り込み 0: `create_user_resolved_read_time` が空の条件で絞り込み |
+| content_or_room_name_like | `message_content` または関連するRoomの名前に部分一致 |
+| from_created_at | 指定時刻の日付以降に作成されたデータ。IntegerのUNIX時間を設定 |
+| to_created_at | 指定時刻の日付以前に作成されたデータ。IntegerのUNIX時間を設定 |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/39359c5335f2548543e9)
 
