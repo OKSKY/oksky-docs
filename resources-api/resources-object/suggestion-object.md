@@ -10,7 +10,8 @@
 
 | Field | Description |
 | :--- | :--- |
-| room_id |  |
+| id | ID |
+| room_id | RoomのID |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/981e77b11762be50c5d9)
 
