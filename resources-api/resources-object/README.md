@@ -44,3 +44,88 @@ https://{YOUR_OKSKY_DOMAIN}.ok-sky.com/rapi/v1/rooms
   &filter[kind]=support_room
 ```
 
+* page[] - ページパラメータはページ番号とレコード数を指定することができます。
+  * number
+    * ページ番号
+    * デフォルトは `1`
+  * size
+    * １ページあたりのレコード数
+    * デフォルトは `25`
+    * 最大取得レコード数は `100`
+
+* sort - カンマで区切られたフィールド名。降順で並び替える場合は、フィールド名に `-` をつける。
+
+* fields[resource] - 関連リソース名を指定します。値はカンマで区切られた属性名。
+
+* include - カンマで区切られた関連リソース名。
+
+* filter[] - 属性名を指定します。
+
+### POST and PATCH Request
+
+POST（作成）リクエストとPATCH（更新）リクエストには、JSONペイロードが必要です。
+
+#### Example
+
+```
+data: {
+  type: "rooms",
+  attributes: {
+    kind: "support_room"
+  }
+}
+```
+
+* data - 
+  * type - リソース名
+  * id - 更新対象のリソースID。作成時には使用しません。
+  * attributes - 属性名と値のハッシュ値。
+
+### Delete Request
+
+IDを持つレコードエンドポイントを指定します。
+
+#### Example
+
+```
+DELETE /rapi/v1/rooms/1
+```
+
+### Status codes
+
+返す主要なstatus codeは以下です。
+
+| Code | Description |
+| :--- | :--- |
+| 200 |	Success |
+| 201 |	Success |
+| 400 |	bad request |
+| 401 |	unauthorized |
+| 403 |	unauthorized |
+| 404 |	not found |
+| 405 |	not allowed |
+| 406 |	not acceptable |
+| 422 |	unprocessable entity |
+| 500 |	standard error |
+| 501 |	not implemented |
+
+### Error responses
+
+エラー時のresponse bodyは、以下のフィールドを持つJSONデータです
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| erros |	Object Array |
+| errors[n].status | error code |
+| errors[n].code | error code |
+| errors[n].title | error title |
+| errors[n].detail | error detail |
+
+### Error messages
+
+Error response JSONにおける errors[title] フィールドに設定される主要なエラーメッセージは以下です。
+
+| Title | Description |
+| :--- | :--- | :--- |
+| Unauthorized | AccessTokenなど、認証に必要な情報の不足 |
+| Invalid IP Address. Did you set the VALID_IPS environment variable? | リクエスト元IPアドレスが不正 |
