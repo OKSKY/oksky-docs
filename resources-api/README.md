@@ -141,7 +141,7 @@ Create Request Sample
 
 ### POST Request
 
-POST（作成）リクエストとPUT（更新）リクエストには、JSONペイロードが必要です。
+POST（作成）リクエストは、JSONペイロードが必要です。
 
 #### Example
 
