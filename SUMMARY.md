@@ -19,6 +19,4 @@
 * [Webhook](webhook/README.md)
   * [Events](webhook/events/README.md)
     * [kind of messages event](webhook/events/kind-of-messages-event.md)
-    * [kind of message\_providers event](webhook/events/kind-of-message_providers-event.md)
-    * [kind of customers event](webhook/events/kind-of-customers-event.md)
 
