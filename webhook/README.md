@@ -7,6 +7,7 @@
 ### Request headers
 
 |Request|header	Description|
+|:----|:----|
 |User-Agent|Oksky-Hookshot/YOUR_OKSKY_DOMAIN|
 |X-Oksky-Secret-Token|WebHookとして設定されたシークレットキー情報|
 |X-Oksky-App-Subdomain|YOUR_OKSKY_DOMAIN|
