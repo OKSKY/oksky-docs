@@ -8,13 +8,13 @@
 | description | string |  |  |
 | is\_private | boolean |  |  |
 | settings | object |  |  |
-| kind | string |  |  |
+| kind | string | support_room => 1 来訪者 : 複数の接客者のグループチャット、direct_room => 2 接客者のみチャットルーム、 group_room => 複数名の接客者が含まれるチャットルーム |  |
 | enabled | boolean |  |  |
-| room\_code | string |  |  |
-| awaiting\_support | boolean |  |  |
-| created\_at\_unix | integer |  |  |
-| created\_at | datetime |  |  |
-| is\_external | boolean |  |  |
+| room\_code | string | ルームコード |  |
+| awaiting\_support | boolean | 接客待ちか否か |  |
+| created\_at\_unix | integer | 作成日時のUnixtime |  |
+| created\_at | datetime | 作成日時 |  |
+| is\_external | boolean | サードパーティメッセージングサービスとの連携が行われているか否か |  |
 
 ### Filters
 
