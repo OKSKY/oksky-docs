@@ -19,4 +19,5 @@
 * [Webhook](webhook/README.md)
   * [Events](webhook/events/README.md)
     * [kind of messages event](webhook/events/kind-of-messages-event.md)
-
+* [JavaScript SDK](js-sdk/README.md)
+  * [About](js-sdk/about/README.md)
