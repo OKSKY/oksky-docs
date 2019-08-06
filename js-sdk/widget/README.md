@@ -1,4 +1,7 @@
 #### 概要
+
+チャットウィジェットを表示するためのJavascript APIです。
+
 * JS SDKのoptions部分にログイン情報やユーザ情報を追加できます。
 * ユーザ情報は接客管理サイトの「来訪者詳細」に表示されます。
 * ユーザ情報のキーワードは接客管理サイトの「マスターキーワード」に自動登録されます。
@@ -9,7 +12,10 @@
 
 ***
 
-### JS SDKの導入手順
+### JS SDKの導入
+
+1. JS SDKの読み込み
+2. チャットウィジェットの表示
 
 #### JS SDKの読み込み方法
 
@@ -72,3 +78,44 @@ window.onload = function() {
 #### ユーザ情報
 * `user_infos: {}` 内に `key: value` の形で追加します。
 * `key` 及び `value` は任意の値を設定できるため、チャットウィジェットを導入するウェブサービス内の顧客情報も使用可能です。
+
+### コールバックを受け取る
+
+| コールバックAPI | 概要 |
+|----|----|
+| chatWidget.widget.onReady | ウィジェットが利用できるようになった時のコールバック |
+| chatWidget.event.onReceivedMessage | メッセージを受信した時のコールバック |
+
+
+例)
+
+```javascript
+<script>
+  var chatWidget;
+  window.onload = function() {
+    chatWidget = new OkskyChat("shimizu-6123606CD9858E57", "http://shimizu.lvh.me:3000/", {
+      login: {
+        customer_code: "123456789"
+      },
+      user_infos: {
+          customer_code: "123456789",
+          live_in: "tokyo",
+          age: "12",
+          sex: "boy",
+          user_id: 1,
+      }
+    });
+    chatWidget.widget.onReady = function() {
+      console.log('onReady !!!!!!!!!');
+      chatWidget.widget.open();
+    }
+
+    chatWidget.event.onReceivedMessage = function(msg) {
+      console.log('onReceivedMessage!!!!!!!!!!!!!!!!!!!', msg);
+      alert('onReceivedMessage')
+    }
+
+    chatWidget.show();
+  }
+</script>
+```
