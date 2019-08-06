@@ -79,6 +79,13 @@ window.onload = function() {
 * `user_infos: {}` 内に `key: value` の形で追加します。
 * `key` 及び `value` は任意の値を設定できるため、チャットウィジェットを導入するウェブサービス内の顧客情報も使用可能です。
 
+### チャットウィジェットを開く・閉じる
+
+| API | 概要 |
+|----|----|
+| chatWidget.widget.open | チャットウィジェットを表示する |
+| chatWidget.widget.close | チャットウィジェットを非表示にする |
+
 ### コールバックを受け取る
 
 | コールバックAPI | 概要 |
