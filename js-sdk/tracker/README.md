@@ -21,7 +21,7 @@
 #### JS SDKの読み込み方法
 
 ```html
-<script src="https://cdn.ok-sky.com/sdk/latest/tracker.js" type="text/javascript"></script>
+<script src="https://cdn.ok-sky.com/sdk/multi/tracker.js" type="text/javascript"></script>
 ```
 * `<head></head>` 内に記載
 
