@@ -21,6 +21,7 @@
 | created_at | string |  |  |
 | created_at_unix | integer |  |  |
 | language | string |  |  |
+| info | string |  |  |
 
 ## Filters
 
@@ -68,162 +69,103 @@ HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "data": {
-    "id": "1",
-    "type": "administrators",
-    "links": {
-      "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1"
-    },
-    "attributes": {
-      "uuid": "662696ae-5c8a-44ba-b36d-df1769b24c86",
-      "username": "Manager",
-      "full_name": null,
-      "name": "Manager",
-      "gravatar_id": "bb48e5ca314e44e0fb0ef522ca453e44",
-      "email": "manager@ok-sky.com",
-      "avatar_url": null,
-      "default_avatar_url": "https://oksky-chat.herokuapp.com/img/av2.png",
-      "user_type": "Administrator",
-      "status": "offline",
-      "max_support_count": 15,
-      "timezone": "Asia/Tokyo",
-      "in_training": null,
-      "is_active": true,
-      "created_at": "2018-11-19T13:43:16.066+09:00",
-      "created_at_unix": 1542602596,
-      "language": "jp"
-    },
-    "relationships": {
-      "support_draft_messages": {
+    "data": {
+        "id": "213",
+        "type": "users",
         "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/support_draft_messages",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/support_draft_messages"
+            "self": "https://fuku.oksky-chat.net/rapi/v1/users/213"
+        },
+        "attributes": {
+            "last_seen_location": "https://fuku.oksky-chat.net/clients/1/test",
+            "recent_room_id": "184",
+            "uuid": "3777489e-933f-45f5-8070-bb6c1ec65671",
+            "username": "1911111455373228",
+            "full_name": null,
+            "name": "1911111455373228",
+            "gravatar_id": "",
+            "email": null,
+            "avatar_url": null,
+            "default_avatar_url": "https://www.oksky-chat.net/img/av1.png",
+            "user_type": "Customer",
+            "status": "offline",
+            "max_support_count": 0,
+            "active_supports_count": 0,
+            "timezone": "Europe/Berlin",
+            "in_training": null,
+            "is_active": true,
+            "created_at": "2019-11-11T23:55:37.455+09:00",
+            "created_at_unix": 1573484137,
+            "language": "ja",
+            "sound_notification": true,
+            "info": {
+                "gender": "1",
+                "country": "japan"
+            },
+            "notification_email": null
+        },
+        "relationships": {
+            "user_widget_settings": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_widget_settings",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_widget_settings"
+                }
+            },
+            "draft_messages": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/draft_messages",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/draft_messages"
+                }
+            },
+            "present_rooms": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/present_rooms",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/present_rooms"
+                }
+            },
+            "support_rooms": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/support_rooms",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/support_rooms"
+                }
+            },
+            "members": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/members",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/members"
+                }
+            },
+            "supports": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/supports",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/supports"
+                }
+            },
+            "rooms": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/rooms",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/rooms"
+                }
+            },
+            "user_supported": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_supported",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_supported"
+                }
+            },
+            "memos": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/memos",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/memos"
+                }
+            },
+            "user_events": {
+                "links": {
+                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_events",
+                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_events"
+                }
+            }
         }
-      },
-      "present_rooms": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/present_rooms",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/present_rooms"
-        },
-        "data": [
-          {
-            "type": "rooms",
-            "id": "3"
-          },
-          {
-            "type": "rooms",
-            "id": "5"
-          },
-          {
-            "type": "rooms",
-            "id": "6"
-          },
-          {
-            "type": "rooms",
-            "id": "1"
-          }
-        ]
-      },
-      "support_rooms": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/support_rooms",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/support_rooms"
-        },
-        "data": [
-          {
-            "type": "rooms",
-            "id": "1"
-          },
-          {
-            "type": "rooms",
-            "id": "1"
-          },
-          {
-            "type": "rooms",
-            "id": "1"
-          }
-        ]
-      },
-      "members": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/members",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/members"
-        },
-        "data": [
-          {
-            "type": "members",
-            "id": "2"
-          },
-          {
-            "type": "members",
-            "id": "3"
-          },
-          {
-            "type": "members",
-            "id": "5"
-          },
-          {
-            "type": "members",
-            "id": "7"
-          }
-        ]
-      },
-      "supports": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/supports",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/supports"
-        },
-        "data": [
-          {
-            "type": "supports",
-            "id": "2"
-          },
-          {
-            "type": "supports",
-            "id": "3"
-          },
-          {
-            "type": "supports",
-            "id": "4"
-          }
-        ]
-      },
-      "rooms": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/rooms",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/rooms"
-        },
-        "data": [
-          {
-            "type": "rooms",
-            "id": "2"
-          },
-          {
-            "type": "rooms",
-            "id": "3"
-          },
-          {
-            "type": "rooms",
-            "id": "5"
-          }
-        ]
-      },
-      "starred_rooms": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/starred_rooms",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/starred_rooms"
-        },
-        "data": []
-      },
-      "starred_customers": {
-        "links": {
-          "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/relationships/starred_customers",
-          "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/administrators/1/starred_customers"
-        },
-        "data": []
-      }
     }
-  }
 }
 ```
 {% endapi-method-response-example %}
