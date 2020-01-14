@@ -73,10 +73,10 @@ Content-Type: application/vnd.api+json
         "id": "213",
         "type": "users",
         "links": {
-            "self": "https://fuku.oksky-chat.net/rapi/v1/users/213"
+            "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213"
         },
         "attributes": {
-            "last_seen_location": "https://fuku.oksky-chat.net/clients/1/test",
+            "last_seen_location": "https://{YOUR_OKSKY_DOMAIN}/clients/1/test",
             "recent_room_id": "184",
             "uuid": "3777489e-933f-45f5-8070-bb6c1ec65671",
             "username": "1911111455373228",
@@ -106,62 +106,62 @@ Content-Type: application/vnd.api+json
         "relationships": {
             "user_widget_settings": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_widget_settings",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_widget_settings"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/user_widget_settings",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/user_widget_settings"
                 }
             },
             "draft_messages": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/draft_messages",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/draft_messages"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/draft_messages",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/draft_messages"
                 }
             },
             "present_rooms": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/present_rooms",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/present_rooms"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/present_rooms",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/present_rooms"
                 }
             },
             "support_rooms": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/support_rooms",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/support_rooms"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/support_rooms",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/support_rooms"
                 }
             },
             "members": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/members",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/members"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/members",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/members"
                 }
             },
             "supports": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/supports",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/supports"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/supports",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/supports"
                 }
             },
             "rooms": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/rooms",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/rooms"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/rooms",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/rooms"
                 }
             },
             "user_supported": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_supported",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_supported"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/user_supported",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/user_supported"
                 }
             },
             "memos": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/memos",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/memos"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/memos",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/memos"
                 }
             },
             "user_events": {
                 "links": {
-                    "self": "https://fuku.oksky-chat.net/rapi/v1/users/213/relationships/user_events",
-                    "related": "https://fuku.oksky-chat.net/rapi/v1/users/213/user_events"
+                    "self": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/relationships/user_events",
+                    "related": "https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/213/user_events"
                 }
             }
         }
