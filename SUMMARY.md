@@ -6,7 +6,6 @@
     * [Room object](resources-api/resources-object/room-object.md)
     * [Message object](resources-api/resources-object/message-object.md)
     * [MasterKeyword object](resources-api/resources-object/masterkeyword-object.md)
-    * [UserInfo object](resources-api/resources-object/userinfo-object.md)
     * [Client object](resources-api/resources-object/client-object.md)
     * [Member object](resources-api/resources-object/member-object.md)
     * [Memo object](resources-api/resources-object/memo-object.md)
