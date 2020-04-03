@@ -1,4 +1,5 @@
-## ２種類のJavaScript SDKをご用意しています
+# JavaScript SDK
 
-* [来訪者用チャットウィジェットを表示する](/js-sdk/widget/README.md)
-* [来訪者をトラッキングする](/js-sdk/tracker/README.md)
+* [来訪者用チャットウィジェットを表示する](widget.md)
+* [来訪者をトラッキングする](tracker.md)
+

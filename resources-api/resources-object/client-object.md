@@ -4,13 +4,13 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| injectable_code | string |  |  |
+| injectable\_code | string |  |  |
 | settings | object |  |  |
 | title | string |  |  |
 | code | string |  |  |
-| default_embedded_css | string |  |  |
-| default_guest_css | string |  |  |
-| default_embedded_html | string |  |  |
+| default\_embedded\_css | string |  |  |
+| default\_guest\_css | string |  |  |
+| default\_embedded\_html | string |  |  |
 
 ## Filters
 
@@ -20,7 +20,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/efca1700c2eb1ff3f4a6)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 find client
 {% endapi-method-summary %}
@@ -136,7 +136,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients" %}
 {% api-method-summary %}
 search clients
 {% endapi-method-summary %}
@@ -258,7 +258,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients" %}
 {% api-method-summary %}
 create client
 {% endapi-method-summary %}
@@ -296,7 +296,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -361,7 +361,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 update clients
 {% endapi-method-summary %}
@@ -399,7 +399,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -480,7 +480,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients/{:id}" %}
 {% api-method-summary %}
 delete client
 {% endapi-method-summary %}
@@ -512,7 +512,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
@@ -520,7 +520,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/clients/{:id}/login" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/clients/{:id}/login" %}
 {% api-method-summary %}
 login
 {% endapi-method-summary %}
@@ -552,7 +552,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "config": {
@@ -575,3 +575,4 @@ set your access token
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

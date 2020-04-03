@@ -4,11 +4,11 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| resource_id | integer |  |  |
-| resource_type | string |  |  |
-| user_id | integer |  |  |
+| resource\_id | integer |  |  |
+| resource\_type | string |  |  |
+| user\_id | integer |  |  |
 | text | string |  |  |
-| created_at_unix | integer |  |  |
+| created\_at\_unix | integer |  |  |
 
 ## Filters
 
@@ -18,7 +18,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6cc5fa81ae1644800b7d)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/memos/{:id}" %}
 {% api-method-summary %}
 find memo
 {% endapi-method-summary %}
@@ -88,7 +88,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/memos" %}
 {% api-method-summary %}
 search memos
 {% endapi-method-summary %}
@@ -164,7 +164,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/memos" %}
 {% api-method-summary %}
 create memo
 {% endapi-method-summary %}
@@ -202,7 +202,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -237,7 +237,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/memos/{:id}" %}
 {% api-method-summary %}
 update memos
 {% endapi-method-summary %}
@@ -275,7 +275,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -310,7 +310,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/memos/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/memos/{:id}" %}
 {% api-method-summary %}
 delete memo
 {% endapi-method-summary %}
@@ -342,10 +342,11 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

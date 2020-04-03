@@ -4,22 +4,22 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| last_read_at_unix | integer |  |  |
-| unread_message_count | integer |  |  |
-| is_room_visible | boolean |  |  |
-| user_typing | string |  |  |
+| last\_read\_at\_unix | integer |  |  |
+| unread\_message\_count | integer |  |  |
+| is\_room\_visible | boolean |  |  |
+| user\_typing | string |  |  |
 
 ## Filters
 
 | Field | Description |
 | :--- | :--- |
 | id | ID |
-| room_id | RoomのID |
-| user_id | UserのID |
+| room\_id | RoomのID |
+| user\_id | UserのID |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4a557e89a56ea430647b)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 find member
 {% endapi-method-summary %}
@@ -98,7 +98,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/members" %}
 {% api-method-summary %}
 search members
 {% endapi-method-summary %}
@@ -130,7 +130,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -358,7 +358,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/members" %}
 {% api-method-summary %}
 create member
 {% endapi-method-summary %}
@@ -396,7 +396,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "8",
@@ -440,7 +440,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 update members
 {% endapi-method-summary %}
@@ -478,7 +478,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -522,7 +522,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/members/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/members/{:id}" %}
 {% api-method-summary %}
 delete member
 {% endapi-method-summary %}
@@ -554,10 +554,11 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

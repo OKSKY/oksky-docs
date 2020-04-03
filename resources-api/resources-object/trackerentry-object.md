@@ -4,9 +4,9 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| time_unix | integer |  |  |
+| time\_unix | integer |  |  |
 | payload | object |  |  |
-| user_uuid | string |  |  |
+| user\_uuid | string |  |  |
 | t | integer |  |  |
 | ua | string |  |  |
 | p | string |  |  |
@@ -19,11 +19,11 @@
 | Field | Description |
 | :--- | :--- |
 | id | ID |
-| user_uuid |  |
+| user\_uuid |  |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/123e52529e9ffdabe8cb)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/tracker_entries" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/tracker\_entries" %}
 {% api-method-summary %}
 search tracker entries
 {% endapi-method-summary %}
@@ -98,7 +98,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/tracker_entries/latest_for_user_uuid" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/tracker\_entries/latest\_for\_user\_uuid" %}
 {% api-method-summary %}
 latest for user uuid
 {% endapi-method-summary %}
@@ -163,3 +163,4 @@ application/vnd.api+json
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

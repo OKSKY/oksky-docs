@@ -4,35 +4,35 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| content | string |  |
-| kind | string |  |
-| settings | object |  |
-| status | integer |  |
-| info | object |  |
-| tags | array |  |
-| created_at | datetime |  |
-| deleted_at | datetime |  |
-| updated_at | datetime |  |
-| created_at_unix | integer |  |
-| deleted_at_unix | integer |  |
+| content | string |  |  |
+| kind | string |  |  |
+| settings | object |  |  |
+| status | integer |  |  |
+| info | object |  |  |
+| tags | array |  |  |
+| created\_at | datetime |  |  |
+| deleted\_at | datetime |  |  |
+| updated\_at | datetime |  |  |
+| created\_at\_unix | integer |  |  |
+| deleted\_at\_unix | integer |  |  |
 
 ## Filters
 
 | Field | Description |
 | :--- | :--- |
 | id | ID |
-| kind | 次の項目から選択 [text, link, image, video, audio, location, sticker, action_link, maltiple, rich_content, stamp, contact, form, item, file] |
-| room_id | RoomのID |
-| after_created_at | 指定時刻より後に作成されたメッセージ。IntegerのUNIX時間を設定 |
-| room_kind | 次の項目から選択 [direct_room, group_room, support_room] |
-| before_created_at | 指定時刻より前に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| kind | 次の項目から選択 \[text, link, image, video, audio, location, sticker, action\_link, maltiple, rich\_content, stamp, contact, form, item, file\] |
+| room\_id | RoomのID |
+| after\_created\_at | 指定時刻より後に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| room\_kind | 次の項目から選択 \[direct\_room, group\_room, support\_room\] |
+| before\_created\_at | 指定時刻より前に作成されたメッセージ。IntegerのUNIX時間を設定 |
 | query |  |
-| start_date | 指定時刻の日付以降に作成されたメッセージ。IntegerのUNIX時間を設定 |
-| end_date | 指定時刻の日付以前に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| start\_date | 指定時刻の日付以降に作成されたメッセージ。IntegerのUNIX時間を設定 |
+| end\_date | 指定時刻の日付以前に作成されたメッセージ。IntegerのUNIX時間を設定 |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23ad71d472b2b38669f3)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 find message
 {% endapi-method-summary %}
@@ -118,7 +118,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages" %}
 {% api-method-summary %}
 search messages
 {% endapi-method-summary %}
@@ -252,7 +252,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages" %}
 {% api-method-summary %}
 create message
 {% endapi-method-summary %}
@@ -284,20 +284,13 @@ application/vnd.api+json
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "3",
@@ -348,7 +341,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 update messages
 {% endapi-method-summary %}
@@ -386,7 +379,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -437,7 +430,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages/{:id}" %}
 {% api-method-summary %}
 delete message
 {% endapi-method-summary %}
@@ -469,7 +462,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
@@ -477,7 +470,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/search" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages/search" %}
 {% api-method-summary %}
 search
 {% endapi-method-summary %}
@@ -509,7 +502,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -517,7 +510,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/messages/export" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/messages/export" %}
 {% api-method-summary %}
 export
 {% endapi-method-summary %}
@@ -549,7 +542,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url,tags_all
 1,a,kiwi-barren-cabbage-1-wbbRxtFEf9E,3,2018/11/08 17:53,2018/11/08 17:53,2,1811081753033735,text,"",""
 ```
@@ -557,3 +550,4 @@ id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

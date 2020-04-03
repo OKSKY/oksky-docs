@@ -1,6 +1,6 @@
 # Room object
 
-### Fields
+## Fields
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
@@ -8,7 +8,7 @@
 | description | string |  |  |
 | is\_private | boolean |  |  |
 | settings | object |  |  |
-| kind | string | support_room => 1 来訪者 : 複数の接客者のグループチャット、direct_room => 2 接客者のみチャットルーム、 group_room => 複数名の接客者が含まれるチャットルーム |  |
+| kind | string | support\_room =&gt; 1 来訪者 : 複数の接客者のグループチャット、direct\_room =&gt; 2 接客者のみチャットルーム、 group\_room =&gt; 複数名の接客者が含まれるチャットルーム |  |
 | enabled | boolean |  |  |
 | room\_code | string | ルームコード |  |
 | awaiting\_support | boolean | 接客待ちか否か |  |
@@ -16,36 +16,37 @@
 | created\_at | datetime | 作成日時 |  |
 | is\_external | boolean | サードパーティメッセージングサービスとの連携が行われているか否か |  |
 
-### Filters
+## Filters
 
 | Field | Description |
 | :--- | :--- |
 | id | ID |
 | name | Roomの名前 |
 | is\_private | Booleanまたは1,0で指定 |
-| kind | 次の項目から選択 [direct_room, group_room, support_room] |
+| kind | 次の項目から選択 \[direct\_room, group\_room, support\_room\] |
 | awaiting\_support | Booleanまたは1,0で指定 |
 | replied |  |
 | starred |  |
-| private_rooms |  |
-| private_rooms_with_active_support |  |
-| private_rooms_with_active_or_awaiting_support |  |
-| current_user_is_member |  |
-| support_rooms_with_active_support |  |
-| support_rooms_with_active_or_awaiting_support |  |
-| current_users_support_rooms_with_active_or_awaiting_support |  |
-| name_like | Room名の部分一致 |
-| support_room_name_like |  |
-| sort_unread_read_for_user_id |  |
+| private\_rooms |  |
+| private\_rooms\_with\_active\_support |  |
+| private\_rooms\_with\_active\_or\_awaiting\_support |  |
+| current\_user\_is\_member |  |
+| support\_rooms\_with\_active\_support |  |
+| support\_rooms\_with\_active\_or\_awaiting\_support |  |
+| current\_users\_support\_rooms\_with\_active\_or\_awaiting\_support |  |
+| name\_like | Room名の部分一致 |
+| support\_room\_name\_like |  |
+| sort\_unread\_read\_for\_user\_id |  |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e59c43089a9d822572e4)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 find room
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -71,7 +72,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
@@ -215,7 +216,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms" %}
 {% api-method-summary %}
 search rooms
 {% endapi-method-summary %}
@@ -247,7 +248,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -397,7 +398,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms" %}
 {% api-method-summary %}
 create room
 {% endapi-method-summary %}
@@ -435,7 +436,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -555,7 +556,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 update rooms
 {% endapi-method-summary %}
@@ -593,7 +594,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -792,7 +793,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}" %}
 {% api-method-summary %}
 delete room
 {% endapi-method-summary %}
@@ -824,7 +825,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
@@ -832,7 +833,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/history" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}/history" %}
 {% api-method-summary %}
 history
 {% endapi-method-summary %}
@@ -864,7 +865,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url,tags_all
 1,a,onyx-corny-spoon-1-eEcWoIfzYnU,17,2018/11/08 11:46,2018/11/08 11:46,12,1811071416537033,text,"",""
 2,b,onyx-corny-spoon-1-eEcWoIfzYnU,17,2018/11/08 11:46,2018/11/08 11:46,12,1811071416537033,text,"",""
@@ -875,7 +876,7 @@ id,content,room_name,room_id,created_at,posted_at,user_id,user_name,kind,src_url
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}/approve\_support\_draft\_messages" %}
 {% api-method-summary %}
 approve support draft messages
 {% endapi-method-summary %}
@@ -907,7 +908,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -978,7 +979,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/{:id}/reject\_support\_draft\_messages" %}
 {% api-method-summary %}
 reject support draft messages
 {% endapi-method-summary %}
@@ -1010,7 +1011,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -1081,7 +1082,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/create\_or\_find\_group\_room" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/create\_or\_find\_group\_room" %}
 {% api-method-summary %}
 create or find group room
 {% endapi-method-summary %}
@@ -1113,7 +1114,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "3",
@@ -1246,7 +1247,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/create\_or\_find\_direct\_room" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/create\_or\_find\_direct\_room" %}
 {% api-method-summary %}
 create or find direct room
 {% endapi-method-summary %}
@@ -1278,7 +1279,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "5",
@@ -1408,7 +1409,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/rooms/room\_counts" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/rooms/room\_counts" %}
 {% api-method-summary %}
 room counts
 {% endapi-method-summary %}
@@ -1440,7 +1441,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "type": "room_counts",
@@ -1469,7 +1470,7 @@ application/vnd.api+json
   }
 }
 ```
-{% endapi-method-response-example %}`
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}

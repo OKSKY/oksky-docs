@@ -1,28 +1,28 @@
-# Message Event
+# kind of messages event
 
 メッセージが送信されたことを示すEvent Objectです。
 
-|Field|Type|Description|
-|:----|:----|:----|
-|id|integer|メッセージ固有のID|
-|room_id|integer|ルーム固有のID|	
-|content|text|チャットテキストコンテント|
-|user_id|integer|作成ユーザー固有のID|
-|created_at|datetime|作成日時|
-|updated_at|datetime|更新日時|
-|kind|integer|メッセージタイプ `text`, `image`, `link` など|
-|settings|object|設定情報|
-|status|integer|`posted` のみ|
-|posted_at|datetime|送信日時|
-|drive_id|string||
-|info|text||
-|stamp_id|string||
-|deleted_at|datetime|削除日時|
-|tags|string||
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id | integer | メッセージ固有のID |
+| room\_id | integer | ルーム固有のID |
+| content | text | チャットテキストコンテント |
+| user\_id | integer | 作成ユーザー固有のID |
+| created\_at | datetime | 作成日時 |
+| updated\_at | datetime | 更新日時 |
+| kind | integer | メッセージタイプ `text`, `image`, `link` など |
+| settings | object | 設定情報 |
+| status | integer | `posted` のみ |
+| posted\_at | datetime | 送信日時 |
+| drive\_id | string |  |
+| info | text |  |
+| stamp\_id | string |  |
+| deleted\_at | datetime | 削除日時 |
+| tags | string |  |
 
-*Sample kind: text*
+_Sample kind: text_
 
-```
+```text
 {
   "id":10305,
   "room_id":3157,
@@ -42,9 +42,9 @@
 }
 ```
 
-*Sample kind: image*
+_Sample kind: image_
 
-```
+```text
 {
   "id":10293,
   "room_id":2424,
@@ -67,3 +67,4 @@
   "tags":[]
 }
 ```
+

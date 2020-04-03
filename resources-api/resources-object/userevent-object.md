@@ -4,10 +4,10 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| resource_type | string |  |  |
+| resource\_type | string |  |  |
 | kind | string |  |  |
-| resource_id | integer |  |  |
-| created_at_unix | integer |  |  |
+| resource\_id | integer |  |  |
+| created\_at\_unix | integer |  |  |
 
 ## Filters
 
@@ -17,7 +17,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/20b7f3930eb31c9ebf89)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/user\_events/{:id}" %}
 {% api-method-summary %}
 find user event
 {% endapi-method-summary %}
@@ -86,7 +86,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/user_events" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/user\_events" %}
 {% api-method-summary %}
 search user events
 {% endapi-method-summary %}
@@ -210,3 +210,4 @@ application/vnd.api+json
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

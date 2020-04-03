@@ -6,20 +6,20 @@
 | :--- | :--- | :--- | :--- |
 | uuid | string |  |  |
 | username | string |  |  |
-| full_name | string |  |  |
+| full\_name | string |  |  |
 | name | string |  |  |
-| gravatar_id | string |  |  |
+| gravatar\_id | string |  |  |
 | email | string |  |  |
-| avatar_url | string |  |  |
-| default_avatar_url | string |  |  |
-| user_type | string |  |  |
+| avatar\_url | string |  |  |
+| default\_avatar\_url | string |  |  |
+| user\_type | string |  |  |
 | status | string |  |  |
-| max_support_count | integer |  |  |
+| max\_support\_count | integer |  |  |
 | timezone | string |  |  |
-| in_training | boolean |  |  |
-| is_active | boolean |  |  |
-| created_at | string |  |  |
-| created_at_unix | integer |  |  |
+| in\_training | boolean |  |  |
+| is\_active | boolean |  |  |
+| created\_at | string |  |  |
+| created\_at\_unix | integer |  |  |
 | language | string |  |  |
 | info | string |  |  |
 
@@ -32,7 +32,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9012e3b8a606555cc81d)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 find user
 {% endapi-method-summary %}
@@ -173,7 +173,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users" %}
 {% api-method-summary %}
 search users
 {% endapi-method-summary %}
@@ -503,7 +503,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users" %}
 {% api-method-summary %}
 create user
 {% endapi-method-summary %}
@@ -541,7 +541,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "4",
@@ -633,7 +633,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 update users
 {% endapi-method-summary %}
@@ -671,7 +671,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -836,7 +836,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/{:id}" %}
 {% api-method-summary %}
 delete user
 {% endapi-method-summary %}
@@ -868,7 +868,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
@@ -876,7 +876,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="patch" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/reactivate" %}
+{% api-method method="patch" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/reactivate" %}
 {% api-method-summary %}
 reactivate
 {% endapi-method-summary %}
@@ -908,7 +908,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -1082,7 +1082,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="patch" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/deactivate" %}
+{% api-method method="patch" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/deactivate" %}
 {% api-method-summary %}
 deactivate
 {% endapi-method-summary %}
@@ -1114,7 +1114,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -1288,7 +1288,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/users/{:id}/regenerate_access_token" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/users/{:id}/regenerate\_access\_token" %}
 {% api-method-summary %}
 regenerate access token
 {% endapi-method-summary %}
@@ -1320,10 +1320,11 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

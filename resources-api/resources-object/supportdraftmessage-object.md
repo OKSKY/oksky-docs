@@ -4,35 +4,35 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| message_content | string |  |  |
+| message\_content | string |  |  |
 | kind | string |  |  |
 | settings | object |  |  |
 | status | string |  |  |
-| resolved_time_unix | integer |  |  |
+| resolved\_time\_unix | integer |  |  |
 | comment | string |  |  |
-| create_user_resolved_read_time_unix | integer |  |  |
-| created_at_unix | integer |  |  |
-| updated_at_unix | integer |  |  |
+| create\_user\_resolved\_read\_time\_unix | integer |  |  |
+| created\_at\_unix | integer |  |  |
+| updated\_at\_unix | integer |  |  |
 
 ## Filters
 
 | Field | Description |
 | :--- | :--- |
 | id | ID |
-| resolved_user_id |  |
-| created_user_id |  |
+| resolved\_user\_id |  |
+| created\_user\_id |  |
 | approved | 1: `status` が `approved` で絞り込み |
 | rejected | 1: `status` が `rejected` で絞り込み |
 | resolved | 1: `resolved_user_id` と `resolved_time` が空でない条件で絞り込み |
-| in_review | 1: `status` が `in_review` または空、且つ、`resolved_user_id` と `resolved_time` が空で無い条件で絞り込み |
+| in\_review | 1: `status` が `in_review` または空、且つ、`resolved_user_id` と `resolved_time` が空で無い条件で絞り込み |
 | read | 1: `create_user_resolved_read_time` が空でない条件で絞り込み 0: `create_user_resolved_read_time` が空の条件で絞り込み |
-| content_or_room_name_like | `message_content` または関連するRoomの名前に部分一致 |
-| from_created_at | 指定時刻の日付以降に作成されたデータ。IntegerのUNIX時間を設定 |
-| to_created_at | 指定時刻の日付以前に作成されたデータ。IntegerのUNIX時間を設定 |
+| content\_or\_room\_name\_like | `message_content` または関連するRoomの名前に部分一致 |
+| from\_created\_at | 指定時刻の日付以降に作成されたデータ。IntegerのUNIX時間を設定 |
+| to\_created\_at | 指定時刻の日付以前に作成されたデータ。IntegerのUNIX時間を設定 |
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/39359c5335f2548543e9)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}" %}
 {% api-method-summary %}
 find support draft message
 {% endapi-method-summary %}
@@ -136,7 +136,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages" %}
 {% api-method-summary %}
 search support draft messages
 {% endapi-method-summary %}
@@ -246,7 +246,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages" %}
 {% api-method-summary %}
 create support draft message
 {% endapi-method-summary %}
@@ -284,7 +284,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "4",
@@ -350,7 +350,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}" %}
 {% api-method-summary %}
 update support draft messages
 {% endapi-method-summary %}
@@ -388,7 +388,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -454,7 +454,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}" %}
 {% api-method-summary %}
 delete support draft message
 {% endapi-method-summary %}
@@ -486,7 +486,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
@@ -494,7 +494,7 @@ Completed 204 No Content
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/mark_read_all_resolved" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/mark\_read\_all\_resolved" %}
 {% api-method-summary %}
 mark read all resolved
 {% endapi-method-summary %}
@@ -526,7 +526,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": [
     {
@@ -594,7 +594,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/approve" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}/approve" %}
 {% api-method-summary %}
 approve
 {% endapi-method-summary %}
@@ -626,7 +626,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -695,7 +695,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/reject" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}/reject" %}
 {% api-method-summary %}
 reject
 {% endapi-method-summary %}
@@ -727,7 +727,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -796,7 +796,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/support_draft_messages/{:id}/mark_read" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/support\_draft\_messages/{:id}/mark\_read" %}
 {% api-method-summary %}
 mark read
 {% endapi-method-summary %}
@@ -828,7 +828,7 @@ application/vnd.api+json
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -896,3 +896,4 @@ application/vnd.api+json
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

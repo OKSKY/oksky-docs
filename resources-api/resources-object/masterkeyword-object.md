@@ -4,9 +4,9 @@
 
 | Field | Type | Description | Editable |
 | :--- | :--- | :--- | :--- |
-| key_name | string |  |
-| key_title | string |  |
-| suggestions | string |  |
+| key\_name | string |  |  |
+| key\_title | string |  |  |
+| suggestions | string |  |  |
 
 ## Filters
 
@@ -16,7 +16,7 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a7d848e84131d1179d8e)
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/{:id}" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/master\_keywords/{:id}" %}
 {% api-method-summary %}
 find master keyword
 {% endapi-method-summary %}
@@ -82,7 +82,7 @@ Content-Type: application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords" %}
+{% api-method method="get" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/master\_keywords" %}
 {% api-method-summary %}
 search master keywords
 {% endapi-method-summary %}
@@ -154,7 +154,7 @@ application/vnd.api+json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords" %}
+{% api-method method="post" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/master\_keywords" %}
 {% api-method-summary %}
 create master keyword
 {% endapi-method-summary %}
@@ -192,7 +192,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "2",
@@ -221,7 +221,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/{:id}" %}
+{% api-method method="put" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/master\_keywords/{:id}" %}
 {% api-method-summary %}
 update master keywords
 {% endapi-method-summary %}
@@ -259,7 +259,7 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "id": "1",
@@ -290,7 +290,7 @@ set your access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="https://{YOUR_OKSKY_DOMAIN}/rapi/v1/master_keywords/{:id}" %}
+{% api-method method="delete" host="" path="https://{YOUR\_OKSKY\_DOMAIN}/rapi/v1/master\_keywords/{:id}" %}
 {% api-method-summary %}
 delete master keyword
 {% endapi-method-summary %}
@@ -322,10 +322,11 @@ set your access token
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 Completed 204 No Content
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
