@@ -44,8 +44,6 @@ window.onload = function() {
   * 接客管理サイトのURLから取得することができます。
   * `https://から始まり、/で終わる` 形で、 `https://{OK SKYシステムのFQDN}/` の形になります。
 
-
-
 ### GA\(Google Analytics\)でトラッキングする
 
 ```javascript
@@ -107,7 +105,8 @@ window.onload = function() {
 | コールバックAPI | 概要 |
 | :--- | :--- |
 | chatWidget.widget.onReady | ウィジェットが利用できるようになった時のコールバック |
-| chatWidget.event.onReceivedMessage | メッセージを受信した時のコールバック |
+| chatWidget.event.onReceivedMessage | 現在開いているサポートでメッセージを受信した時のコールバック |
+| chatWidget.event.onReceivedSomeMessage | 現在開いているサポートを含む、すべてのサポートのいずれかでメッセージを受信した時のコールバック |
 
 例\)
 
@@ -137,8 +136,150 @@ window.onload = function() {
       alert('onReceivedMessage')
     }
 
+    chatWidget.event.onReceivedSomeMessage = function(msg) {
+      console.log('onReceivedSomeMessage!!!!!!!!!!!!!!!!!!!', msg);
+      alert('onReceivedSomeMessage')
+    }
+
     chatWidget.show();
   }
 </script>
 ```
 
+## ビルトイン関数
+
+### 他のイベント（クリック等）をトリガーにしてメッセージを送る
+
+**chatWidget.postMessage(roomName, message, callback);**
+
+```javascript
+<script>
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  var postMessageButton = document.getElementById("post_message");
+  postMessageButton.addEventListener("click", function(event){
+    chatWidget.postMessage(null, "メッセージ内容", function(room){
+      // 投稿したサポートルームの情報 (room) に対する処理
+    });
+  });
+}
+</script>
+```
+
+得られる結果（room）のサンプル
+
+```javascript
+{
+  awaiting_support: true,
+  client_id: 1,
+  create_user_id: 1,
+  created_at: "2020-01-01T10:10:10.111+09:00",
+  description: null,
+  enabled: null,
+  external_service_id: null,
+  helped_room_id: null,
+  id: 1,
+  is_private: false,
+  kind: "support_room",
+  latest_message_id: 1,
+  name: "sample-room-name-nEdOtD4RsN4",
+  room_code: null,
+  settings: {
+    message_classify: true,
+    message_dialog: false
+  },
+  updated_at: "2020-01-01T10:10:10.111+09:00"
+}
+```
+
+* ① roomName: string
+  * サポートルーム名 `room.name` を指定します。指定しない場合、新規サポートルームにメッセージが送信されます。
+* ② message: string
+  * 送信するメッセージを指定します。
+* ③ callback: function
+  * メッセージの送信に成功した場合に、実行する処理を記述できます。メッセージを送信したサポートルーム `room` の内容を参照することができます。
+
+### 現在のサポートルーム一覧を取得する
+
+**chatWidget.rooms(callback);**
+
+```javascript
+<script>
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  chatWidget.rooms(function(response){
+    // サポートルーム一覧 (response.data) に対する処理
+  });
+}
+</script>
+```
+
+得られる結果（response.data）のサンプル
+
+```javascript
+[
+  { id: 1, name: "sample-room-name-1nEdOtDARsN" },
+  { id: 2, name: "sample-room-name-2nEdOtDARsN" },
+  { id: 3, name: "sample-room-name-3nEdOtDARsN" }
+]
+```
+
+* ① callback: function
+  * サポートルーム一覧の取得に成功した場合に、実行する処理を記述できます。  
+
+### サポートルームと未読メッセージ件数の一覧を取得する
+
+**chatWidget.unreadMessageCount(roomId, callback);**
+
+```javascript
+<script>
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  var roomId = 1;
+  chatWidget.unreadMessageCount(roomId, function(entry){
+    // サポートルームと未読メッセージ件数 (entry) に対する処理
+  });
+}
+</script>
+```
+
+得られる結果（entry）のサンプル
+
+```javascript
+{
+  room_id: 1,
+  unread_message_counts: 2
+}
+```
+
+* ① roomId: number
+  * `chatWidget.rooms` で取得したサポートルームの ID `room.id` を指定します。
+* ② callback: function
+  * サポートルームと未読メッセージ件数の取得に成功した場合に、実行する処理を記述できます。  
+
+## ビルトイン関数サンプル
+
+### いずれかのサポートルームでメッセージを受信した場合、サポートルームごとの未読件数を取得する
+
+```javascript
+window.onload = function() {
+  var chatWidget = new OkskyChat("shimizu-6123606CD9858E57", "http://shimizu.lvh.me:3000/", {'ga_client_code':'GTM-XXXX'});
+  chatWidget.show();
+  chatWidget.event.onReceivedSomeMessage = function(event) {
+    handleReceivedSomeMessage(event);
+  };
+  function handleReceivedSomeMessage(event) {
+    chatWidget.rooms(function(response){
+      if (response.data.length != 0) {
+        response.data.forEach(function(room) {
+          chatWidget.unreadMessageCount(room.id, function(entry){
+            // サポートルームの ID と未読件数を取得
+            console.log("room_id:", entry.room_id);
+            console.log("unread_message_counts:", entry.unread_message_counts);
+          });
+        });
+      }
+    });
+  };
+});
+```
