@@ -49,7 +49,7 @@ window.onload = function() {
 ```javascript
 <script>
 window.onload = function() {
-  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {"ga_client_code", "トラッキングコード"});
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {'ga_client_code':'トラッキングコード'});
   chatWidget.show();
 }
 </script>
@@ -114,7 +114,7 @@ window.onload = function() {
 <script>
   var chatWidget;
   window.onload = function() {
-    chatWidget = new OkskyChat("shimizu-6123606CD9858E57", "http://shimizu.lvh.me:3000/", {
+    chatWidget = new OkskyChat("fuku-6123606CD9858E57", "http://fuku.ok-sky.net/", {
       login: {
         customer_code: "123456789"
       },
@@ -263,7 +263,7 @@ window.onload = function() {
 
 ```javascript
 window.onload = function() {
-  var chatWidget = new OkskyChat("shimizu-6123606CD9858E57", "http://shimizu.lvh.me:3000/", {'ga_client_code':'GTM-XXXX'});
+  var chatWidget = new OkskyChat("fuku-6123606CD9858E57", "http://fuku.ok-sky.net/", {'ga_client_code':'GTM-XXXX'});
   chatWidget.show();
   chatWidget.event.onReceivedSomeMessage = function(event) {
     handleReceivedSomeMessage(event);
