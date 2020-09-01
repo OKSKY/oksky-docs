@@ -1,4 +1,4 @@
-# kind of messages event
+# Messages Object
 
 メッセージが送信されたことを示すEvent Objectです。
 
