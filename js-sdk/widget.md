@@ -2,26 +2,26 @@
 
 ### 概要
 
-チャットウィジェットを表示するためのJavascript APIです。
+任意のウェブサイトに、チャットウィジェットを表示するための JavaScript API です。
 
-* JS SDKのoptions部分にログイン情報やユーザ情報を追加できます。
+* ログイン情報やユーザ情報を追加できます。
 * ユーザ情報は接客管理サイトの「来訪者詳細」に表示されます。
 * ユーザ情報のキーワードは接客管理サイトの「マスターキーワード」に自動登録されます。
 
 ### 対象
 
 * 来訪者用のチャットウィジェットを導入するウェブサイトがある
-* HTML / JavaScriptに関する基本的な知識がある
+* HTML / JavaScript に関する基本的な知識がある
 
-## JS SDKの導入
+## JS SDK の導入
 
-1. JS SDKの読み込み
+1. JS SDK の読み込み
 2. チャットウィジェットの表示
 
-### JS SDKの読み込み方法
+### JS SDK の読み込み方法
 
 ```markup
-<script src="https://cdn.ok-sky.com/js/multi/widget.js" type="text/javascript"></script>
+<script src="https://cdn.ok-sky.com/sdk/multi/widget.js" type="text/javascript"></script>
 ```
 
 * `<head></head>` 内に記載
@@ -31,35 +31,67 @@
 ```javascript
 <script>
 window.onload = function() {
-  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  var chatWidget = new OkskyChat("ウィジェット ID", "OK SKY システムの URL", {});
   chatWidget.show();
 }
 </script>
 ```
 
 * `<body>` 直後に記載
-* ① ウィジェットID
-  * ウィジェットIDは、接客管理サイトにて、「ウィジェット」管理ページにて、取得することができます。
-* ② OK SKYシステムのURL
-  * 接客管理サイトのURLから取得することができます。
-  * `https://から始まり、/で終わる` 形で、 `https://{OK SKYシステムのFQDN}/` の形になります。
+* ① ウィジェット ID
+  * ウィジェット ID は、接客管理サイトの「ウィジェット」管理ページで取得することができます。
+* ② OK SKY システムの URL
+  * 接客管理サイトの URL を指定します。
+  * `https://から始まり、/で終わる` 形で、 `https://{OK SKYシステムの FQDN}/` の形になります。
 
-### GA\(Google Analytics\)でトラッキングする
+### GA\(Google Analytics\) でトラッキングする
 
 ```javascript
 <script>
 window.onload = function() {
-  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {'ga_client_code':'トラッキングコード'});
+  var chatWidget = new OkskyChat("ウィジェット ID", "OK SKY システムの URL", {"ga_client_code", "トラッキング ID"});
   chatWidget.show();
 }
 </script>
 ```
 
-* オプションとして、 `ga_client_code` をキーとして、トラッキングコードを設定します。
+* オプションに `{"ga_client_code", "トラッキングID"}` を設定します。
+* トラッキング ID には Google アナリティクスで作成した `UA-********-*` 形式の文字列が入ります。
+
+### チャットウィジェットを開くボタンを表示させないようにする
+
+```javascript
+<script>
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  chatWidget.show({"hideButton":true});
+}
+</script>
+```
+
+* チャットウィジェットを開くためのボタンとして、OK SKY が提供するデフォルトのボタンは表示せず、ご自身でデザインしたボタンを使いたい場合、この機能を利用します。
+* `chatWidget.show()` の引数に `{"hideButton":true}` を指定することで、チャットウィジェットを開くボタンを表示させないようにすることができます。
+* この引数を指定することでデフォルトのボタンは表示されなくなります。 `widget.onReady()` イベントのコールバックによって代わりのボタンを表示するとともに、そのボタンのイベントに `chatWidget.widget.open()` を割り当てる必要があります。
+* チャットウィジェットを開くボタンとポップアップウィンドウのどちらも表示させない場合は `{"hideButton":true,"hidePopup":true}` のように指定します。
+
+### ポップアップウィンドウを表示させないようにする
+
+```javascript
+<script>
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL");
+  chatWidget.show({"hidePopup":true});
+}
+</script>
+```
+
+* チャットウィジェットが閉じた状態でメッセージを受信した際、ポップアップウィンドウによって受信したメッセージが表示されますが、これを表示させない場合にこの機能を利用します。
+* `chatWidget.show()` の引数に `{"hidePopup":true}` を指定することで、チャットウィジェットが閉じた状態でメッセージを受信した際に表示されるポップアップウィンドウを表示させないようにすることができます。
+* チャットウィジェットを開くボタンとポップアップウィンドウのどちらも表示させない場合は `{"hideButton":true,"hidePopup":true}` のように指定します。
 
 ## ログイン情報 / ユーザ情報の追加方法
 
-ログイン方法やユーザ情報は `OkskyChat()` 関数の第三引数に追加します。 上の導入手順のコードに当てはめた場合、以下のようになります。
+ログイン方法やユーザ情報は `OkskyChat()` 関数の第三引数 `options` に追加します。 上の導入手順のコードに当てはめた場合、以下のようになります。
 
 ```javascript
 <script>
@@ -97,16 +129,16 @@ window.onload = function() {
 
 | API | 概要 |
 | :--- | :--- |
-| chatWidget.widget.open | チャットウィジェットを表示する |
-| chatWidget.widget.close | チャットウィジェットを非表示にする |
+| chatWidget.widget.open(roomId?) | チャットウィジェットを表示する ※チャットルームを指定して表示することも可能 |
+| chatWidget.widget.close() | チャットウィジェットを非表示にする |
 
 ## コールバックを受け取る
 
 | コールバックAPI | 概要 |
 | :--- | :--- |
-| chatWidget.widget.onReady | ウィジェットが利用できるようになった時のコールバック |
-| chatWidget.event.onReceivedMessage | 現在開いているサポートでメッセージを受信した時のコールバック |
-| chatWidget.event.onReceivedSomeMessage | 現在開いているサポートを含む、すべてのサポートのいずれかでメッセージを受信した時のコールバック |
+| chatWidget.widget.onReady(function) | ウィジェットが利用できるようになった時のコールバック |
+| chatWidget.event.onReceivedMessage(function) | 現在開いているサポートでメッセージを受信した時のコールバック |
+| chatWidget.event.onReceivedSomeMessage(function) | 現在開いているサポートを含む、すべてのサポートのいずれかでメッセージを受信した時のコールバック |
 
 例\)
 
@@ -114,7 +146,7 @@ window.onload = function() {
 <script>
   var chatWidget;
   window.onload = function() {
-    chatWidget = new OkskyChat("fuku-6123606CD9858E57", "http://fuku.ok-sky.net/", {
+    chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {
       login: {
         customer_code: "123456789"
       },
@@ -127,17 +159,17 @@ window.onload = function() {
       }
     });
     chatWidget.widget.onReady = function() {
-      console.log('onReady !!!!!!!!!');
+      console.log('🔥onReady');
       chatWidget.widget.open();
     }
 
     chatWidget.event.onReceivedMessage = function(msg) {
-      console.log('onReceivedMessage!!!!!!!!!!!!!!!!!!!', msg);
+      console.log('🔥onReceivedMessage', msg);
       alert('onReceivedMessage')
     }
 
     chatWidget.event.onReceivedSomeMessage = function(msg) {
-      console.log('onReceivedSomeMessage!!!!!!!!!!!!!!!!!!!', msg);
+      console.log('🔥onReceivedSomeMessage', msg);
       alert('onReceivedSomeMessage')
     }
 
@@ -206,7 +238,7 @@ window.onload = function() {
 ```javascript
 <script>
 window.onload = function() {
-  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  var chatWidget = new OkskyChat("ウィジェット ID", "OK SKY システムの URL", {});
   chatWidget.rooms(function(response){
     // サポートルーム一覧 (response.data) に対する処理
   });
@@ -234,7 +266,7 @@ window.onload = function() {
 ```javascript
 <script>
 window.onload = function() {
-  var chatWidget = new OkskyChat("ウィジェットID", "OK SKYシステムのURL", {});
+  var chatWidget = new OkskyChat("ウィジェット ID", "OK SKY システムの URL", {});
   var roomId = 1;
   chatWidget.unreadMessageCount(roomId, function(entry){
     // サポートルームと未読メッセージ件数 (entry) に対する処理
@@ -263,7 +295,7 @@ window.onload = function() {
 
 ```javascript
 window.onload = function() {
-  var chatWidget = new OkskyChat("fuku-6123606CD9858E57", "http://fuku.ok-sky.net/", {'ga_client_code':'GTM-XXXX'});
+  var chatWidget = new OkskyChat("ウィジェット ID", "OK SKY システムの URL", {});
   chatWidget.show();
   chatWidget.event.onReceivedSomeMessage = function(event) {
     handleReceivedSomeMessage(event);
@@ -282,4 +314,35 @@ window.onload = function() {
     });
   };
 });
+```
+
+### デフォルトのボタン以外から自動メッセージを送信し、指定したサポートルームを開く
+
+```html
+<a href="#" id="chat_btn">メッセージを作成する & チャットを開く</a>
+<a href="#" id="show_btn" style="display: none;">チャットを開く（room: <span id="room_id"></span>）</a>
+```
+
+```javascript
+window.onload = function() {
+  var chatWidget = new OkskyChat("ウィジェットID", "OK SKY システムの URL", {});
+  chatWidget.show({"hideButton":true,"hidePopup":true});
+
+  document.getElementById('chat_btn').addEventListener('click', function (event) {
+    const okSkyWidgetElement = document.getElementById('ok-sky-widget');
+    okSkyWidgetElement.style.display = "block";
+    const message = "テスト自動メッセージ";
+    chatWidget.postMessage(null, message, function(room) {
+      let roomId = document.getElementById("room_id");
+      let showBtn = document.getElementById("show_btn");
+      roomId.innerHTML = room.id;
+      chatWidget.widget.open(document.getElementById("room_id").innerHTML);
+      showBtn.style.display = 'block';
+    });
+  }, false);
+
+  document.getElementById('show_btn').addEventListener('click', function (event) {
+    chatWidget.widget.open(document.getElementById("room_id").innerHTML);
+  }, false);
+}
 ```
