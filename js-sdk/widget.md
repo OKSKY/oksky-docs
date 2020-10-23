@@ -97,7 +97,7 @@ window.onload = function() {
 
 | API | 概要 |
 | :--- | :--- |
-| chatWidget.widget.open | チャットウィジェットを表示する |
+| chatWidget.widget.open\(room\_id\(String\)\) | 特定のルームを指定してチャットウィジェットを表示する |
 | chatWidget.widget.close | チャットウィジェットを非表示にする |
 
 ## コールバックを受け取る
@@ -111,6 +111,8 @@ window.onload = function() {
 例\)
 
 ```javascript
+<button id="chat_btn">チャットで相談</button>
+
 <script>
   var chatWidget;
   window.onload = function() {
@@ -124,24 +126,34 @@ window.onload = function() {
           age: "12",
           sex: "boy",
           user_id: 1,
-      }
+      },
+      'ga_client_code': 'GTM-XXXX'
     });
     chatWidget.widget.onReady = function() {
+      // ウィジェットが利用できるようになった時
       console.log('onReady !!!!!!!!!');
-      chatWidget.widget.open();
     }
 
     chatWidget.event.onReceivedMessage = function(msg) {
+      // 現在開いているサポートでメッセージを受信した時
       console.log('onReceivedMessage!!!!!!!!!!!!!!!!!!!', msg);
       alert('onReceivedMessage')
     }
 
     chatWidget.event.onReceivedSomeMessage = function(msg) {
+      // 現在開いているサポートを含む、すべてのサポートのいずれかでメッセージを受信した時
       console.log('onReceivedSomeMessage!!!!!!!!!!!!!!!!!!!', msg);
       alert('onReceivedSomeMessage')
     }
 
     chatWidget.show();
+    
+    document.getElementById('chat_btn').addEventListener('click', function (event) {
+      // 自ら用意したボタンを用いてメッセージを作成する。
+      chatWidget.postMessage(null, "テストメッセージ", function (room) {
+        chatWidget.widget.open(room.id.toString()); // チャットウィジェット表示する
+      });
+    }
   }
 </script>
 ```
@@ -150,7 +162,7 @@ window.onload = function() {
 
 ### 他のイベント（クリック等）をトリガーにしてメッセージを送る
 
-**chatWidget.postMessage(roomName, message, callback);**
+**chatWidget.postMessage\(roomName, message, callback\);**
 
 ```javascript
 <script>
@@ -201,7 +213,7 @@ window.onload = function() {
 
 ### 現在のサポートルーム一覧を取得する
 
-**chatWidget.rooms(callback);**
+**chatWidget.rooms\(callback\);**
 
 ```javascript
 <script>
@@ -229,7 +241,7 @@ window.onload = function() {
 
 ### サポートルームと未読メッセージ件数の一覧を取得する
 
-**chatWidget.unreadMessageCount(roomId, callback);**
+**chatWidget.unreadMessageCount\(roomId, callback\);**
 
 ```javascript
 <script>
@@ -283,3 +295,4 @@ window.onload = function() {
   };
 });
 ```
+
